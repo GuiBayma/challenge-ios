@@ -11,6 +11,7 @@
 		17A940FF22A56836004B9054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A940FE22A56836004B9054 /* Assets.xcassets */; };
 		17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A9410022A56836004B9054 /* LaunchScreen.storyboard */; };
 		17A9410B22A570F0004B9054 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */; };
+		17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3D722A5B8680044792D /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		17A9410122A56836004B9054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A9410322A56836004B9054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		17BDA3D722A5B8680044792D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				17A940F722A56835004B9054 /* AppDelegate.swift */,
+				17BDA3D722A5B8680044792D /* AppCoordinator.swift */,
 				17A9410922A5688E004B9054 /* SupportingFiles */,
 			);
 			path = Lodjinha;
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
