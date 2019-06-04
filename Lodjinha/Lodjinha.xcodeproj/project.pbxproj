@@ -15,6 +15,8 @@
 		17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E422A5FB2E0044792D /* Colors.swift */; };
 		17BDA3E922A600F80044792D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E722A600F80044792D /* Fonts.swift */; };
 		17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E822A600F80044792D /* ImageAssets.swift */; };
+		17BDA41022A60F2E0044792D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA40E22A60F2E0044792D /* Localizable.strings */; };
+		17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41222A6104A0044792D /* LocalizableStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		17BDA3E422A5FB2E0044792D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		17BDA3E722A600F80044792D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		17BDA3E822A600F80044792D /* ImageAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		17BDA40F22A60F2E0044792D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Lodjinha/SupportingFiles/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		17BDA41122A60F3D0044792D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "../SupportingFiles/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		17BDA41222A6104A0044792D /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 				17BDA3E422A5FB2E0044792D /* Colors.swift */,
 				17BDA3DC22A5D3270044792D /* Images.xcassets */,
 				17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */,
+				17BDA40E22A60F2E0044792D /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 			children = (
 				17BDA3E722A600F80044792D /* Fonts.swift */,
 				17BDA3E822A600F80044792D /* ImageAssets.swift */,
+				17BDA41222A6104A0044792D /* LocalizableStrings.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 17A940EB22A56834004B9054;
 			productRefGroup = 17A940F522A56835004B9054 /* Products */;
@@ -158,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A9410B22A570F0004B9054 /* Pacifico-Regular.ttf in Resources */,
+				17BDA41022A60F2E0044792D /* Localizable.strings in Resources */,
 				17BDA3DD22A5D3270044792D /* Images.xcassets in Resources */,
 				17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -192,15 +201,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Lodjinha/Resources/Images.xcassets",
-				"$(SRCROOT)/Lodjinha/Resources/Pacifico-Regular.ttf",
 			);
 			name = SwiftGen;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(SRCROOT)/Lodjinha/Resources/Generated/ImageAssets.swift",
-				"$(SRCROOT)/Lodjinha/Resources/Generated/Fonts.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
+				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
 				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
@@ -232,6 +238,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		17BDA40E22A60F2E0044792D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17BDA40F22A60F2E0044792D /* Base */,
+				17BDA41122A60F3D0044792D /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -239,6 +254,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -300,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

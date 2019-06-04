@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Lodjinha
+
+  Created by Guilherme Bayma on 03/06/19.
+  Copyright © 2019 Guilherme Bayma. All rights reserved.
+*/
+
+"HOME_TAB" = "Home";
+"ABOUT_TAB" = "Sobre";

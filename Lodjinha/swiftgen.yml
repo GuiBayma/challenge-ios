@@ -1,12 +1,17 @@
-input_dir: Lodjinha/Resources/
+input_dir: Lodjinha/
 output_dir: Lodjinha/Resources/Generated/
 xcassets:
-  inputs: Images.xcassets
+  inputs: Resources/Images.xcassets
   outputs:
     - templateName: swift4
       output: ImageAssets.swift
 fonts:
-  inputs: Pacifico-Regular.ttf
+  inputs: Resources/Pacifico-Regular.ttf
   outputs:
     templateName: swift4
     output: Fonts.swift
+strings:
+  inputs: SupportingFiles/Base.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: LocalizableStrings.swift
