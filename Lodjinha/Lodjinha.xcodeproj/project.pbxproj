@@ -21,7 +21,43 @@
 		17BDA41B22A6CE660044792D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41A22A6CE660044792D /* AboutView.swift */; };
 		17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */; };
 		17BDA41F22A6E7B40044792D /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */; };
+		17BDA42722A6F4190044792D /* LodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA42622A6F4190044792D /* LodjinhaTests.swift */; };
+		17BDA43622A704DA0044792D /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */; };
+		17BDA43722A704DA0044792D /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */; };
+		17BDA43822A704DA0044792D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; };
+		17BDA43922A704DA0044792D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43522A704DA0044792D /* Quick.framework */; };
+		17BDA43B22A705150044792D /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17BDA43C22A705150044792D /* Nimble_Snapshots.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17BDA43D22A705150044792D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17BDA43E22A705150044792D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43522A704DA0044792D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17BDA44222A7063E0044792D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44122A7063E0044792D /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17BDA42922A6F4190044792D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A940EC22A56834004B9054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A940F322A56835004B9054;
+			remoteInfo = Lodjinha;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17BDA43A22A704E70044792D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17BDA43B22A705150044792D /* FBSnapshotTestCase.framework in CopyFiles */,
+				17BDA43C22A705150044792D /* Nimble_Snapshots.framework in CopyFiles */,
+				17BDA43D22A705150044792D /* Nimble.framework in CopyFiles */,
+				17BDA43E22A705150044792D /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17A940F422A56835004B9054 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +77,14 @@
 		17BDA41A22A6CE660044792D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
+		17BDA42422A6F4180044792D /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BDA42622A6F4190044792D /* LodjinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTests.swift; sourceTree = "<group>"; };
+		17BDA42822A6F4190044792D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		17BDA43422A704DA0044792D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		17BDA43522A704DA0044792D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		17BDA44122A7063E0044792D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +95,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BDA42122A6F4180044792D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BDA43622A704DA0044792D /* FBSnapshotTestCase.framework in Frameworks */,
+				17BDA43722A704DA0044792D /* Nimble_Snapshots.framework in Frameworks */,
+				17BDA43822A704DA0044792D /* Nimble.framework in Frameworks */,
+				17BDA43922A704DA0044792D /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,7 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				17A940F622A56835004B9054 /* Lodjinha */,
+				17BDA42522A6F4190044792D /* LodjinhaTests */,
 				17A940F522A56835004B9054 /* Products */,
+				17BDA43122A704DA0044792D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				17A940F422A56835004B9054 /* Lodjinha.app */,
+				17BDA42422A6F4180044792D /* LodjinhaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +145,7 @@
 			children = (
 				17A9410322A56836004B9054 /* Info.plist */,
 				17A9410022A56836004B9054 /* LaunchScreen.storyboard */,
+				17BDA44122A7063E0044792D /* main.swift */,
 				17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */,
 				17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */,
 			);
@@ -124,6 +183,26 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		17BDA42522A6F4190044792D /* LodjinhaTests */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA42622A6F4190044792D /* LodjinhaTests.swift */,
+				17BDA42822A6F4190044792D /* Info.plist */,
+			);
+			path = LodjinhaTests;
+			sourceTree = "<group>";
+		};
+		17BDA43122A704DA0044792D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */,
+				17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */,
+				17BDA43422A704DA0044792D /* Nimble.framework */,
+				17BDA43522A704DA0044792D /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +215,8 @@
 				17A940F122A56835004B9054 /* Frameworks */,
 				17A940F222A56835004B9054 /* Resources */,
 				17A9410C22A5B165004B9054 /* SwiftLint */,
+				17BDA43F22A705AF0044792D /* Carthage */,
+				17BDA44022A705CD0044792D /* Carthage Outaded? */,
 			);
 			buildRules = (
 			);
@@ -145,6 +226,25 @@
 			productName = Lodjinha;
 			productReference = 17A940F422A56835004B9054 /* Lodjinha.app */;
 			productType = "com.apple.product-type.application";
+		};
+		17BDA42322A6F4180044792D /* LodjinhaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17BDA42B22A6F4190044792D /* Build configuration list for PBXNativeTarget "LodjinhaTests" */;
+			buildPhases = (
+				17BDA42022A6F4180044792D /* Sources */,
+				17BDA42122A6F4180044792D /* Frameworks */,
+				17BDA42222A6F4180044792D /* Resources */,
+				17BDA43A22A704E70044792D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17BDA42A22A6F4190044792D /* PBXTargetDependency */,
+			);
+			name = LodjinhaTests;
+			productName = LodjinhaTests;
+			productReference = 17BDA42422A6F4180044792D /* LodjinhaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -158,6 +258,10 @@
 				TargetAttributes = {
 					17A940F322A56835004B9054 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					17BDA42322A6F4180044792D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 17A940F322A56835004B9054;
 					};
 				};
 			};
@@ -176,6 +280,7 @@
 			projectRoot = "";
 			targets = (
 				17A940F322A56835004B9054 /* Lodjinha */,
+				17BDA42322A6F4180044792D /* LodjinhaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +294,13 @@
 				17BDA41022A60F2E0044792D /* Localizable.strings in Resources */,
 				17BDA3DD22A5D3270044792D /* Images.xcassets in Resources */,
 				17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17BDA42222A6F4180044792D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +343,42 @@
 			shellPath = /bin/sh;
 			shellScript = "mint run swiftgen swiftgen config run\n";
 		};
+		17BDA43F22A705AF0044792D /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run carthage carthage copy-frameworks\n";
+		};
+		17BDA44022A705CD0044792D /* Carthage Outaded? */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage Outaded?";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run carthage carthage outdated --xcode-warnings\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -245,13 +393,30 @@
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
 				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
+				17BDA44222A7063E0044792D /* main.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
 				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BDA42022A6F4180044792D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BDA42722A6F4190044792D /* LodjinhaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17BDA42A22A6F4190044792D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A940F322A56835004B9054 /* Lodjinha */;
+			targetProxy = 17BDA42922A6F4190044792D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		17A9410022A56836004B9054 /* LaunchScreen.storyboard */ = {
@@ -430,6 +595,159 @@
 			};
 			name = Release;
 		};
+		17BDA42C22A6F4190044792D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LodjinhaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.LodjinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Debug;
+		};
+		17BDA42D22A6F4190044792D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LodjinhaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.LodjinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Release;
+		};
+		17BDA44322A706F70044792D /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TEST";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Test;
+		};
+		17BDA44422A706F70044792D /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Lodjinha/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.Lodjinha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		17BDA44522A706F70044792D /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LodjinhaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.LodjinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Test;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,6 +755,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17A9410422A56836004B9054 /* Debug */,
+				17BDA44322A706F70044792D /* Test */,
 				17A9410522A56836004B9054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -446,7 +765,18 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17A9410722A56836004B9054 /* Debug */,
+				17BDA44422A706F70044792D /* Test */,
 				17A9410822A56836004B9054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17BDA42B22A6F4190044792D /* Build configuration list for PBXNativeTarget "LodjinhaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BDA42C22A6F4190044792D /* Debug */,
+				17BDA44522A706F70044792D /* Test */,
+				17BDA42D22A6F4190044792D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
