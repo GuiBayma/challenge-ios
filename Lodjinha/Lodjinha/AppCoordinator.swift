@@ -23,24 +23,24 @@ final class AppCoordinator {
     }
 
     private func setupTabBar() {
-        tabController.tabBar.tintColor = UIColor.Theme.Purple
+        tabController.tabBar.tintColor = UIColor.Background.Purple
         tabController.viewControllers = setupTabControllers()
     }
 
     private func setupTabControllers() -> [UIViewController] {
         let homeController = UIViewController() // Type inference
-        homeController.view.backgroundColor = .white
+        homeController.view.backgroundColor = .lightGray
         homeController.tabBarItem = UITabBarItem(title: L10n.homeTab,
                                                  image: Asset.homeDeselected.image,
                                                  selectedImage: Asset.homeActive.image)
 
-        let aboutController = UIViewController() // Type inference
-        aboutController.view.backgroundColor = .cyan
-        aboutController.tabBarItem = UITabBarItem(title: L10n.aboutTab,
-                                                 image: Asset.tagDeselected.image,
-                                                 selectedImage: Asset.tagSelected.image)
+        let aboutController: AboutViewController = AboutViewController()
+        let navigationController: UINavigationController = UINavigationController(rootViewController: aboutController)
+        navigationController.tabBarItem = UITabBarItem(title: L10n.aboutTab,
+                                                       image: Asset.tagDeselected.image,
+                                                       selectedImage: Asset.tagSelected.image)
 
-        return [homeController, aboutController]
+        return [homeController, navigationController]
     }
 }
 

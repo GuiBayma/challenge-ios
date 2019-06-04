@@ -20,6 +20,7 @@
 internal enum Asset {
   internal static let homeActive = ImageAsset(name: "homeActive")
   internal static let homeDeselected = ImageAsset(name: "homeDeselected")
+  internal static let logoSobre = ImageAsset(name: "logoSobre")
   internal static let tagDeselected = ImageAsset(name: "tagDeselected")
   internal static let tagSelected = ImageAsset(name: "tagSelected")
 }

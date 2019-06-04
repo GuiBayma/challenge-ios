@@ -17,6 +17,10 @@
 		17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E822A600F80044792D /* ImageAssets.swift */; };
 		17BDA41022A60F2E0044792D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA40E22A60F2E0044792D /* Localizable.strings */; };
 		17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41222A6104A0044792D /* LocalizableStrings.swift */; };
+		17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41822A6CE560044792D /* AboutViewController.swift */; };
+		17BDA41B22A6CE660044792D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41A22A6CE660044792D /* AboutView.swift */; };
+		17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */; };
+		17BDA41F22A6E7B40044792D /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		17BDA40F22A60F2E0044792D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Lodjinha/SupportingFiles/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		17BDA41122A60F3D0044792D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "../SupportingFiles/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		17BDA41222A6104A0044792D /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		17BDA41822A6CE560044792D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		17BDA41A22A6CE660044792D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			children = (
 				17A940F722A56835004B9054 /* AppDelegate.swift */,
 				17BDA3D722A5B8680044792D /* AppCoordinator.swift */,
+				17BDA41722A6CE070044792D /* About */,
 				17BDA3DB22A5D2FF0044792D /* Resources */,
 				17A9410922A5688E004B9054 /* SupportingFiles */,
 			);
@@ -78,6 +87,8 @@
 			children = (
 				17A9410322A56836004B9054 /* Info.plist */,
 				17A9410022A56836004B9054 /* LaunchScreen.storyboard */,
+				17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */,
+				17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -102,6 +113,15 @@
 				17BDA41222A6104A0044792D /* LocalizableStrings.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		17BDA41722A6CE070044792D /* About */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA41822A6CE560044792D /* AboutViewController.swift */,
+				17BDA41A22A6CE660044792D /* AboutView.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
 				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
+				17BDA41F22A6E7B40044792D /* UINavigationController+StatusBar.swift in Sources */,
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
+				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
+				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
 				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,

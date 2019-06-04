@@ -9,10 +9,17 @@
 import UIKit
 
 extension UIColor {
-    struct Theme {
+    struct Background {
         static let Purple: UIColor = UIColor(red: 105.0/255.0,
                                              green: 65.0/255.0,
                                              blue: 143.0/255.0,
                                              alpha: 1.0)
+    }
+
+    struct Text {
+        static let Grey: UIColor = UIColor(red: 74.0/255.0,
+                                           green: 74.0/255.0,
+                                           blue: 74.0/255.0,
+                                           alpha: 1.0)
     }
 }

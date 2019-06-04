@@ -6,5 +6,11 @@
   Copyright © 2019 Guilherme Bayma. All rights reserved.
 */
 
+// Tab
 "HOME_TAB" = "Home";
 "ABOUT_TAB" = "About";
+
+// About
+"BRAND_NAME" = "a Lodjinha";
+"DEVELOPER_NAME" = "Guilherme Bayma";
+"DEVELOPMENT_DATE" = "June 04, 2019";
