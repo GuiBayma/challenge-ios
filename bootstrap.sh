@@ -22,6 +22,17 @@ install_mint() {
     fi
 }
 
+install_swiftgen_dependencies() {
+    if [[ $(brew ls --versions libxml2) == "" ]]
+    then
+        echo "Instalando libxml2"
+        brew install libxml2
+        echo "libxml2 Instalado";
+    else
+        echo "libxml2 já Instalado";
+    fi
+}
+
 bootstrap_mint() {
     echo "Instalando Packages do Mint"
     mint bootstrap
@@ -30,6 +41,7 @@ bootstrap_mint() {
 
 install_homebrew
 install_mint
+install_swiftgen_dependencies
 bootstrap_mint
 
 echo "🚀 Bootstrap finalizado! Pronto para codar!"

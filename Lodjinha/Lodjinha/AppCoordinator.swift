@@ -23,7 +23,7 @@ final class AppCoordinator {
     }
 
     private func setupTabBar() {
-        tabController.tabBar.tintColor = UIColor(red: 105.0/255.0, green: 65.0/255.0, blue: 143.0/255.0, alpha: 1)
+        tabController.tabBar.tintColor = UIColor.Theme.Purple
         tabController.viewControllers = setupTabControllers()
     }
 
@@ -31,14 +31,14 @@ final class AppCoordinator {
         let homeController = UIViewController() // Type inference
         homeController.view.backgroundColor = .white
         homeController.tabBarItem = UITabBarItem(title: "Home",
-                                                 image: UIImage(named: "homeDeselected"),
-                                                 selectedImage: UIImage(named: "homeActive"))
+                                                 image: Asset.homeDeselected.image,
+                                                 selectedImage: Asset.homeActive.image)
 
         let aboutController = UIViewController() // Type inference
         aboutController.view.backgroundColor = .cyan
         aboutController.tabBarItem = UITabBarItem(title: "Sobre",
-                                                 image: UIImage(named: "tagDeselected"),
-                                                 selectedImage: UIImage(named: "tagSelected"))
+                                                 image: Asset.tagDeselected.image,
+                                                 selectedImage: Asset.tagSelected.image)
 
         return [homeController, aboutController]
     }

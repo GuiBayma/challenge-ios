@@ -1,0 +1,12 @@
+input_dir: Lodjinha/Resources/
+output_dir: Lodjinha/Resources/Generated/
+xcassets:
+  inputs: Images.xcassets
+  outputs:
+    - templateName: swift4
+      output: ImageAssets.swift
+fonts:
+  inputs: Pacifico-Regular.ttf
+  outputs:
+    templateName: swift4
+    output: Fonts.swift

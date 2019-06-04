@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		17A940F822A56835004B9054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A940F722A56835004B9054 /* AppDelegate.swift */; };
-		17A940FF22A56836004B9054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A940FE22A56836004B9054 /* Assets.xcassets */; };
 		17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A9410022A56836004B9054 /* LaunchScreen.storyboard */; };
 		17A9410B22A570F0004B9054 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */; };
 		17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3D722A5B8680044792D /* AppCoordinator.swift */; };
+		17BDA3DD22A5D3270044792D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA3DC22A5D3270044792D /* Images.xcassets */; };
+		17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E422A5FB2E0044792D /* Colors.swift */; };
+		17BDA3E922A600F80044792D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E722A600F80044792D /* Fonts.swift */; };
+		17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E822A600F80044792D /* ImageAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17A940F422A56835004B9054 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A940F722A56835004B9054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17A940FE22A56836004B9054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A9410122A56836004B9054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A9410322A56836004B9054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		17BDA3D722A5B8680044792D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		17BDA3DC22A5D3270044792D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		17BDA3E422A5FB2E0044792D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		17BDA3E722A600F80044792D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		17BDA3E822A600F80044792D /* ImageAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			children = (
 				17A940F722A56835004B9054 /* AppDelegate.swift */,
 				17BDA3D722A5B8680044792D /* AppCoordinator.swift */,
+				17BDA3DB22A5D2FF0044792D /* Resources */,
 				17A9410922A5688E004B9054 /* SupportingFiles */,
 			);
 			path = Lodjinha;
@@ -64,12 +71,30 @@
 		17A9410922A5688E004B9054 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				17A940FE22A56836004B9054 /* Assets.xcassets */,
 				17A9410322A56836004B9054 /* Info.plist */,
 				17A9410022A56836004B9054 /* LaunchScreen.storyboard */,
-				17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		17BDA3DB22A5D2FF0044792D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA3E022A5F6750044792D /* Generated */,
+				17BDA3E422A5FB2E0044792D /* Colors.swift */,
+				17BDA3DC22A5D3270044792D /* Images.xcassets */,
+				17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		17BDA3E022A5F6750044792D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA3E722A600F80044792D /* Fonts.swift */,
+				17BDA3E822A600F80044792D /* ImageAssets.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,10 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A9410622A56836004B9054 /* Build configuration list for PBXNativeTarget "Lodjinha" */;
 			buildPhases = (
+				17BDA3E122A5F69E0044792D /* SwiftGen */,
 				17A940F022A56835004B9054 /* Sources */,
 				17A940F122A56835004B9054 /* Frameworks */,
 				17A940F222A56835004B9054 /* Resources */,
-				17A9410C22A5B165004B9054 /* Swiftlint */,
+				17A9410C22A5B165004B9054 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -132,15 +158,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A9410B22A570F0004B9054 /* Pacifico-Regular.ttf in Resources */,
+				17BDA3DD22A5D3270044792D /* Images.xcassets in Resources */,
 				17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */,
-				17A940FF22A56836004B9054 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17A9410C22A5B165004B9054 /* Swiftlint */ = {
+		17A9410C22A5B165004B9054 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,7 +175,7 @@
 			);
 			inputPaths = (
 			);
-			name = Swiftlint;
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -158,6 +184,28 @@
 			shellPath = /bin/sh;
 			shellScript = "mint run swiftlint swiftlint\n";
 		};
+		17BDA3E122A5F69E0044792D /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Lodjinha/Resources/Images.xcassets",
+				"$(SRCROOT)/Lodjinha/Resources/Pacifico-Regular.ttf",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Lodjinha/Resources/Generated/ImageAssets.swift",
+				"$(SRCROOT)/Lodjinha/Resources/Generated/Fonts.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run swiftgen swiftgen config run\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -165,7 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
+				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
+				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
