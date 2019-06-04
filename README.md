@@ -37,3 +37,9 @@ $ mint run carthage carthage update --platform iOS --no-use-binaries
 ```
 
 Ou rode o script de bootstrap novamente.
+
+## Testes
+
+Para rodar os testes, com o Xcode aberto, pressione `Command`+`U`.
+
+Por convenção, os testes são rodados no simulador do iPhone SE.

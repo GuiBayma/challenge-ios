@@ -21,7 +21,6 @@
 		17BDA41B22A6CE660044792D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41A22A6CE660044792D /* AboutView.swift */; };
 		17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */; };
 		17BDA41F22A6E7B40044792D /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */; };
-		17BDA42722A6F4190044792D /* LodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA42622A6F4190044792D /* LodjinhaTests.swift */; };
 		17BDA43622A704DA0044792D /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */; };
 		17BDA43722A704DA0044792D /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */; };
 		17BDA43822A704DA0044792D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; };
@@ -31,6 +30,9 @@
 		17BDA43D22A705150044792D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17BDA43E22A705150044792D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43522A704DA0044792D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17BDA44222A7063E0044792D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44122A7063E0044792D /* main.swift */; };
+		17BDA44722A709A80044792D /* AppCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */; };
+		17BDA44A22A711FE0044792D /* AboutViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44922A711FE0044792D /* AboutViewControllerSpec.swift */; };
+		17BDA44C22A7142C0044792D /* Snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA44B22A7142C0044792D /* Snapshots */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,13 +80,15 @@
 		17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
 		17BDA42422A6F4180044792D /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17BDA42622A6F4190044792D /* LodjinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTests.swift; sourceTree = "<group>"; };
 		17BDA42822A6F4190044792D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
 		17BDA43422A704DA0044792D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		17BDA43522A704DA0044792D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		17BDA44122A7063E0044792D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorSpec.swift; sourceTree = "<group>"; };
+		17BDA44922A711FE0044792D /* AboutViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerSpec.swift; sourceTree = "<group>"; };
+		17BDA44B22A7142C0044792D /* Snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snapshots; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +190,10 @@
 		17BDA42522A6F4190044792D /* LodjinhaTests */ = {
 			isa = PBXGroup;
 			children = (
-				17BDA42622A6F4190044792D /* LodjinhaTests.swift */,
+				17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */,
+				17BDA44822A711D30044792D /* About */,
 				17BDA42822A6F4190044792D /* Info.plist */,
+				17BDA44B22A7142C0044792D /* Snapshots */,
 			);
 			path = LodjinhaTests;
 			sourceTree = "<group>";
@@ -201,6 +207,14 @@
 				17BDA43522A704DA0044792D /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17BDA44822A711D30044792D /* About */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA44922A711FE0044792D /* AboutViewControllerSpec.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA44C22A7142C0044792D /* Snapshots in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17BDA42722A6F4190044792D /* LodjinhaTests.swift in Sources */,
+				17BDA44722A709A80044792D /* AppCoordinatorSpec.swift in Sources */,
+				17BDA44A22A711FE0044792D /* AboutViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LNGFCK45YW;
 				INFOPLIST_FILE = "$(SRCROOT)/Lodjinha/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,7 +597,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LNGFCK45YW;
 				INFOPLIST_FILE = "$(SRCROOT)/Lodjinha/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,6 +616,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGFCK45YW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -624,6 +641,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGFCK45YW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -710,7 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LNGFCK45YW;
 				INFOPLIST_FILE = "$(SRCROOT)/Lodjinha/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,6 +747,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGFCK45YW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

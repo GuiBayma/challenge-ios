@@ -16,9 +16,9 @@ final class AppCoordinator {
     private let window: UIWindow
     private let tabController: UITabBarController
 
-    init(window: UIWindow) {
+    init(window: UIWindow, tabController: UITabBarController = UITabBarController()) {
         self.window = window
-        tabController = UITabBarController()
+        self.tabController = tabController
         setupTabBar()
     }
 
