@@ -17,7 +17,7 @@ extension UIColor {
     }
 
     struct Text {
-        static let Grey: UIColor = UIColor(red: 74.0/255.0,
+        static let Gray: UIColor = UIColor(red: 74.0/255.0,
                                            green: 74.0/255.0,
                                            blue: 74.0/255.0,
                                            alpha: 1.0)

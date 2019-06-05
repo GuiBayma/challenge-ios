@@ -22,7 +22,7 @@ final class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont(font: FontFamily.Pacifico.regular, size: 48.0)
-        label.textColor = UIColor.Text.Grey
+        label.textColor = UIColor.Text.Gray
         label.textAlignment = .center
         label.text = L10n.brandName
         return label
@@ -32,7 +32,7 @@ final class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        label.textColor = UIColor.Text.Grey
+        label.textColor = UIColor.Text.Gray
         label.textAlignment = .center
         label.text = L10n.developerName
         return label
@@ -42,7 +42,7 @@ final class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12, weight: .light)
-        label.textColor = UIColor.Text.Grey
+        label.textColor = UIColor.Text.Gray
         label.textAlignment = .center
         label.text = L10n.developmentDate
         return label

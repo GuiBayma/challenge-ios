@@ -9,12 +9,14 @@
 import UIKit
 
 protocol Coordinator: AnyObject {
+    var rootViewController: UIViewController { get }
     func start()
 }
 
 final class AppCoordinator {
     private let window: UIWindow
     private let tabController: UITabBarController
+    private var coordinators: [Coordinator] = []
 
     init(window: UIWindow, tabController: UITabBarController = UITabBarController()) {
         self.window = window
@@ -28,25 +30,26 @@ final class AppCoordinator {
     }
 
     private func setupTabControllers() -> [UIViewController] {
-        let homeController = UIViewController() // Type inference
-        homeController.view.backgroundColor = .lightGray
-        homeController.tabBarItem = UITabBarItem(title: L10n.homeTab,
-                                                 image: Asset.homeDeselected.image,
-                                                 selectedImage: Asset.homeActive.image)
+        let homeCoordinator: HomeCoordinator = HomeCoordinator()
+        homeCoordinator.start()
+        coordinators.append(homeCoordinator)
 
-        let aboutController: AboutViewController = AboutViewController()
-        let navigationController: UINavigationController = UINavigationController(rootViewController: aboutController)
-        navigationController.tabBarItem = UITabBarItem(title: L10n.aboutTab,
-                                                       image: Asset.tagDeselected.image,
-                                                       selectedImage: Asset.tagSelected.image)
+        let aboutCoordinator: AboutCoordinator = AboutCoordinator()
+        aboutCoordinator.start()
+        coordinators.append(aboutCoordinator)
 
-        return [homeController, navigationController]
+        return [homeCoordinator.rootViewController,
+                aboutCoordinator.rootViewController]
     }
 }
 
 // MARK: - Coordinator
 
 extension AppCoordinator: Coordinator {
+    var rootViewController: UIViewController {
+        return tabController
+    }
+
     func start() {
         window.rootViewController = tabController
         window.makeKeyAndVisible()

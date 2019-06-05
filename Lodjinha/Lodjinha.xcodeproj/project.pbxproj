@@ -33,6 +33,10 @@
 		17BDA44722A709A80044792D /* AppCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */; };
 		17BDA44A22A711FE0044792D /* AboutViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44922A711FE0044792D /* AboutViewControllerSpec.swift */; };
 		17BDA44C22A7142C0044792D /* Snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA44B22A7142C0044792D /* Snapshots */; };
+		17BDA44E22A82B8A0044792D /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA44D22A82B8A0044792D /* AboutCoordinator.swift */; };
+		17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45022A84E100044792D /* HomeCoordinator.swift */; };
+		17BDA45422A84FA90044792D /* AboutCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45322A84FA90044792D /* AboutCoordinatorSpec.swift */; };
+		17BDA45622A854350044792D /* HomeCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45522A854350044792D /* HomeCoordinatorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorSpec.swift; sourceTree = "<group>"; };
 		17BDA44922A711FE0044792D /* AboutViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerSpec.swift; sourceTree = "<group>"; };
 		17BDA44B22A7142C0044792D /* Snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snapshots; sourceTree = "<group>"; };
+		17BDA44D22A82B8A0044792D /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
+		17BDA45022A84E100044792D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		17BDA45322A84FA90044792D /* AboutCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinatorSpec.swift; sourceTree = "<group>"; };
+		17BDA45522A854350044792D /* HomeCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 			children = (
 				17A940F722A56835004B9054 /* AppDelegate.swift */,
 				17BDA3D722A5B8680044792D /* AppCoordinator.swift */,
+				17BDA44F22A84DF70044792D /* Home */,
 				17BDA41722A6CE070044792D /* About */,
 				17BDA3DB22A5D2FF0044792D /* Resources */,
 				17A9410922A5688E004B9054 /* SupportingFiles */,
@@ -181,6 +190,7 @@
 		17BDA41722A6CE070044792D /* About */ = {
 			isa = PBXGroup;
 			children = (
+				17BDA44D22A82B8A0044792D /* AboutCoordinator.swift */,
 				17BDA41822A6CE560044792D /* AboutViewController.swift */,
 				17BDA41A22A6CE660044792D /* AboutView.swift */,
 			);
@@ -191,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */,
+				17BDA45222A84F8F0044792D /* Home */,
 				17BDA44822A711D30044792D /* About */,
 				17BDA42822A6F4190044792D /* Info.plist */,
 				17BDA44B22A7142C0044792D /* Snapshots */,
@@ -212,9 +223,26 @@
 		17BDA44822A711D30044792D /* About */ = {
 			isa = PBXGroup;
 			children = (
+				17BDA45322A84FA90044792D /* AboutCoordinatorSpec.swift */,
 				17BDA44922A711FE0044792D /* AboutViewControllerSpec.swift */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		17BDA44F22A84DF70044792D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA45022A84E100044792D /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		17BDA45222A84F8F0044792D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA45522A854350044792D /* HomeCoordinatorSpec.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA44E22A82B8A0044792D /* AboutCoordinator.swift in Sources */,
 				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
 				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
@@ -408,6 +437,7 @@
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
 				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
+				17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */,
 				17BDA44222A7063E0044792D /* main.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
 				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
@@ -419,6 +449,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA45622A854350044792D /* HomeCoordinatorSpec.swift in Sources */,
+				17BDA45422A84FA90044792D /* AboutCoordinatorSpec.swift in Sources */,
 				17BDA44722A709A80044792D /* AppCoordinatorSpec.swift in Sources */,
 				17BDA44A22A711FE0044792D /* AboutViewControllerSpec.swift in Sources */,
 			);
