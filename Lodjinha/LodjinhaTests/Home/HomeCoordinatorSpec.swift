@@ -28,6 +28,12 @@ class HomeCoordinatorSpec: QuickSpec {
                 it("should have navigation controller as root controller") {
                     expect(rootController).to(beAKindOf(UINavigationController.self))
                 }
+
+                it("should have HomeViewController as root controller from navigation controller") {
+                    let navigationController = rootController as? UINavigationController
+                    let firstController = navigationController?.viewControllers.first
+                    expect(firstController).to(beAKindOf(HomeViewController.self))
+                }
             }
 
             context("Tab bar item") {

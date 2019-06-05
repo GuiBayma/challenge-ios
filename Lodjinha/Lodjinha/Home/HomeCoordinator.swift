@@ -31,8 +31,7 @@ extension HomeCoordinator: Coordinator {
     }
 
     func start() {
-        let controller = UIViewController()
-        controller.view.backgroundColor = .lightGray
-        navigationController.pushViewController(controller, animated: false)
+        let homeController = HomeViewController()
+        navigationController.pushViewController(homeController, animated: false)
     }
 }

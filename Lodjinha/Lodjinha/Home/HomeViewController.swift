@@ -1,16 +1,16 @@
 //
-//  AboutViewController.swift
+//  HomeViewController.swift
 //  Lodjinha
 //
-//  Created by Guilherme Bayma on 04/06/19.
+//  Created by Guilherme Bayma on 05/06/19.
 //  Copyright © 2019 Guilherme Bayma. All rights reserved.
 //
 
 import UIKit
 
-final class AboutViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
-    private let aboutView: AboutView = AboutView()
+    private let homeView: HomeView = HomeView()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -19,7 +19,7 @@ final class AboutViewController: UIViewController {
     // MARK: - Controller lifecycle
 
     override func loadView() {
-        self.view = aboutView
+        self.view = homeView
     }
 
     override func viewDidLoad() {
@@ -30,6 +30,6 @@ final class AboutViewController: UIViewController {
     // MARK: - Navigation Bar setup
 
     private func setupNavigationBar() {
-        navigationController?.configureNavigationBar(with: L10n.aboutTab)
+        navigationController?.configureNavigationBar(with: Asset.logoNavbar.image)
     }
 }

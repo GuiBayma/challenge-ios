@@ -11,7 +11,6 @@
 		17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A9410022A56836004B9054 /* LaunchScreen.storyboard */; };
 		17A9410B22A570F0004B9054 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */; };
 		17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3D722A5B8680044792D /* AppCoordinator.swift */; };
-		17BDA3DD22A5D3270044792D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA3DC22A5D3270044792D /* Images.xcassets */; };
 		17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E422A5FB2E0044792D /* Colors.swift */; };
 		17BDA3E922A600F80044792D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E722A600F80044792D /* Fonts.swift */; };
 		17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA3E822A600F80044792D /* ImageAssets.swift */; };
@@ -20,7 +19,7 @@
 		17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41822A6CE560044792D /* AboutViewController.swift */; };
 		17BDA41B22A6CE660044792D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41A22A6CE660044792D /* AboutView.swift */; };
 		17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */; };
-		17BDA41F22A6E7B40044792D /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */; };
+		17BDA41F22A6E7B40044792D /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA41E22A6E7B40044792D /* UINavigationController+Extensions.swift */; };
 		17BDA43622A704DA0044792D /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */; };
 		17BDA43722A704DA0044792D /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */; };
 		17BDA43822A704DA0044792D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; };
@@ -37,6 +36,9 @@
 		17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45022A84E100044792D /* HomeCoordinator.swift */; };
 		17BDA45422A84FA90044792D /* AboutCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45322A84FA90044792D /* AboutCoordinatorSpec.swift */; };
 		17BDA45622A854350044792D /* HomeCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45522A854350044792D /* HomeCoordinatorSpec.swift */; };
+		17BDA45822A856B70044792D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45722A856B70044792D /* HomeView.swift */; };
+		17BDA45A22A856C40044792D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA45922A856C40044792D /* HomeViewController.swift */; };
+		17BDA45C22A865B20044792D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA45B22A865B20044792D /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +74,6 @@
 		17A9410322A56836004B9054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		17BDA3D722A5B8680044792D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		17BDA3DC22A5D3270044792D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17BDA3E422A5FB2E0044792D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		17BDA3E722A600F80044792D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		17BDA3E822A600F80044792D /* ImageAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
@@ -82,7 +83,7 @@
 		17BDA41822A6CE560044792D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		17BDA41A22A6CE660044792D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
-		17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
+		17BDA41E22A6E7B40044792D /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		17BDA42422A6F4180044792D /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BDA42822A6F4190044792D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
@@ -97,6 +98,9 @@
 		17BDA45022A84E100044792D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		17BDA45322A84FA90044792D /* AboutCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinatorSpec.swift; sourceTree = "<group>"; };
 		17BDA45522A854350044792D /* HomeCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorSpec.swift; sourceTree = "<group>"; };
+		17BDA45722A856B70044792D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		17BDA45922A856C40044792D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		17BDA45B22A865B20044792D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +164,7 @@
 				17A9410022A56836004B9054 /* LaunchScreen.storyboard */,
 				17BDA44122A7063E0044792D /* main.swift */,
 				17BDA41C22A6CECB0044792D /* UIView+Anchors.swift */,
-				17BDA41E22A6E7B40044792D /* UINavigationController+StatusBar.swift */,
+				17BDA41E22A6E7B40044792D /* UINavigationController+Extensions.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -169,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				17BDA3E022A5F6750044792D /* Generated */,
+				17BDA45B22A865B20044792D /* Images.xcassets */,
 				17BDA3E422A5FB2E0044792D /* Colors.swift */,
-				17BDA3DC22A5D3270044792D /* Images.xcassets */,
 				17A9410A22A570F0004B9054 /* Pacifico-Regular.ttf */,
 				17BDA40E22A60F2E0044792D /* Localizable.strings */,
 			);
@@ -233,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				17BDA45022A84E100044792D /* HomeCoordinator.swift */,
+				17BDA45922A856C40044792D /* HomeViewController.swift */,
+				17BDA45722A856B70044792D /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -333,8 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A9410B22A570F0004B9054 /* Pacifico-Regular.ttf in Resources */,
+				17BDA45C22A865B20044792D /* Images.xcassets in Resources */,
 				17BDA41022A60F2E0044792D /* Localizable.strings in Resources */,
-				17BDA3DD22A5D3270044792D /* Images.xcassets in Resources */,
 				17A9410222A56836004B9054 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,10 +436,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				17BDA44E22A82B8A0044792D /* AboutCoordinator.swift in Sources */,
+				17BDA45822A856B70044792D /* HomeView.swift in Sources */,
 				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
 				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
-				17BDA41F22A6E7B40044792D /* UINavigationController+StatusBar.swift in Sources */,
+				17BDA45A22A856C40044792D /* HomeViewController.swift in Sources */,
+				17BDA41F22A6E7B40044792D /* UINavigationController+Extensions.swift in Sources */,
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
 				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
