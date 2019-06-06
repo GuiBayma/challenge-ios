@@ -9,12 +9,23 @@
 import UIKit
 
 protocol TableViewHandlerDelegate: AnyObject {
+    var delegate: TableViewHandlerActionDelegate? { get set }
+    func numberOfSections() -> Int
     func numberOfRowsInSection(_ section: Int) -> Int
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 }
 
+extension TableViewHandlerDelegate {
+    func numberOfSections() -> Int { return 1 }
+}
+
+protocol TableViewHandlerActionDelegate: AnyObject {
+    func updateTableView(section: Int)
+}
+
 final class TableViewHandler {
 
+    weak var delegate: TableViewHandlerActionDelegate?
     private var childHandlers: [TableViewHandlerDelegate]
 
     init(childHandlers: [TableViewHandlerDelegate] = []) {
@@ -25,7 +36,7 @@ final class TableViewHandler {
     private func createChildHandlers() {
         guard childHandlers.isEmpty else { return }
 
-        childHandlers.append(BannerTableViewHandler())
+        childHandlers.append(BannerTableViewHandler(delegate: delegate))
     }
 }
 

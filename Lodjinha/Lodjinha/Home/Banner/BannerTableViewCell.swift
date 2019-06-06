@@ -11,6 +11,8 @@ import UIKit
 
 final class BannerTableViewCell: UITableViewCell, Reusable {
 
+    var banners: [Banner]?
+
     private lazy var shimmeringView: ShimmerView = {
         let view = ShimmerView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +40,7 @@ extension BannerTableViewCell: ViewConfiguration {
     func setupConstraints() {
         shimmeringView
             .anchorTo(view: contentView, inset: 5)
-            .heightAnchor(equalTo: 150)
+            .heightAnchor(equalTo: 120)
     }
 
     func configureViews() {

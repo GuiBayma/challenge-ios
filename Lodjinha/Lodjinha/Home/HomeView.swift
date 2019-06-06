@@ -35,6 +35,14 @@ final class HomeView: UIView {
         tableView.dataSource = delegateSource
         setupView()
     }
+
+    // MARK: - TableView updates
+
+    func reloadTableViewSections(at sections: IndexSet) {
+        tableView.beginUpdates()
+        tableView.reloadSections(sections, with: .fade)
+        tableView.endUpdates()
+    }
 }
 
 // MARK: - ViewConfiguration

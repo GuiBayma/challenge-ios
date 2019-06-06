@@ -11,15 +11,16 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     private lazy var homeView: HomeView = HomeView(delegateSource: self)
-    private let tableViewHandler: TableViewHandler
+    private let tableViewHandler: TableViewHandlerDelegate
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(handler: TableViewHandler = TableViewHandler() ) {
+    init(handler: TableViewHandlerDelegate = TableViewHandler()) {
         tableViewHandler = handler
         super.init(nibName: nil, bundle: nil)
+        tableViewHandler.delegate = self
     }
 
     // MARK: - Controller lifecycle
@@ -57,5 +58,13 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return tableViewHandler.tableView(tableView, cellForRowAt: indexPath)
+    }
+}
+
+// MARK: - TableViewHandlerActionDelegate
+
+extension HomeViewController: TableViewHandlerActionDelegate {
+    func updateTableView(section: Int) {
+        homeView.reloadTableViewSections(at: [section])
     }
 }
