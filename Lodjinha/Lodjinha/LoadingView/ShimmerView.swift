@@ -12,11 +12,10 @@ final class ShimmerView: UIView {
 
     private let gradientLayer: CAGradientLayer = CAGradientLayer()
 
-    private lazy var runnerView: UIView = {
+    private lazy var shinyView: UIView = {
         let view: UIView = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .clear
-        view.layer.opacity = 0.6
+        view.backgroundColor = UIColor.Background.White
         return view
     }()
 
@@ -38,30 +37,26 @@ final class ShimmerView: UIView {
     }
 
     private func configureGradientLayer() {
-        gradientLayer.frame = runnerView.bounds
-        gradientLayer.colors = [UIColor.Background.LightGray.cgColor,
-                                UIColor.Background.DarkGray.cgColor,
-                                UIColor.Background.LightGray.cgColor]
+        gradientLayer.frame = shinyView.frame
+        gradientLayer.colors = [UIColor.clear.cgColor,
+                                UIColor.Background.White.cgColor,
+                                UIColor.clear.cgColor]
         gradientLayer.locations = [0, 0.5, 1]
+        let angle: CGFloat = 90 * .pi / 180
+        gradientLayer.transform = CATransform3DMakeRotation(angle, 0, 0, 1)
 
-        runnerView.layer.addSublayer(gradientLayer)
+        shinyView.layer.mask = gradientLayer
     }
 
     private func animate() {
-        runnerView.layer.removeAllAnimations()
+        let animation: CABasicAnimation = CABasicAnimation(keyPath: "transform.translation.x")
+        animation.fromValue = -shinyView.frame.width
+        animation.toValue = shinyView.frame.width
+        animation.duration = 2
+        animation.repeatCount = .infinity
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
 
-        guard let view = superview else { return }
-
-        let positionAnimation: CABasicAnimation = CABasicAnimation(keyPath: "position")
-        positionAnimation.beginTime = 0.5
-        positionAnimation.fromValue = runnerView.layer.position
-        positionAnimation.toValue = CGPoint(x: view.convert(layer.position, to: self).x + frame.width,
-                                            y: runnerView.layer.position.y)
-        positionAnimation.duration = 1
-        positionAnimation.repeatCount = .infinity
-        positionAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-
-        runnerView.layer.add(positionAnimation, forKey: positionAnimation.keyPath)
+        gradientLayer.add(animation, forKey: animation.keyPath)
     }
 }
 
@@ -69,11 +64,11 @@ final class ShimmerView: UIView {
 
 extension ShimmerView: ViewConfiguration {
     func setupViewHierarchy() {
-        addSubview(runnerView)
+        addSubview(shinyView)
     }
 
     func setupConstraints() {
-        runnerView.anchorTo(view: self)
+        shinyView.anchorTo(view: self)
     }
 
     func configureViews() {
