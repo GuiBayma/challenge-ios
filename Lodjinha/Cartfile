@@ -1,3 +1,7 @@
+# Project packages
+
+github "AliSoftware/Reusable" ~> 4.0
+
 # Test packages
 
 github "Quick/Nimble" ~> 8.0

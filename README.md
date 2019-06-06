@@ -33,7 +33,7 @@ Ou rode o script de bootstrap novamente.
 Caso exista um novo framework adicionado ao `Cartfile` rode:
 
 ```console
-$ mint run carthage carthage update --platform iOS --no-use-binaries
+$ mint run carthage carthage update <nome do framework> --platform iOS --no-use-binaries
 ```
 
 Ou rode o script de bootstrap novamente.
