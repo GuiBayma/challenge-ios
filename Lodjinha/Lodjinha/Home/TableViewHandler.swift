@@ -25,7 +25,13 @@ protocol TableViewHandlerActionDelegate: AnyObject {
 
 final class TableViewHandler {
 
-    weak var delegate: TableViewHandlerActionDelegate?
+    weak var delegate: TableViewHandlerActionDelegate? {
+        didSet {
+            childHandlers.forEach { child in
+                child.delegate = delegate
+            }
+        }
+    }
     private var childHandlers: [TableViewHandlerDelegate]
 
     init(childHandlers: [TableViewHandlerDelegate] = []) {
@@ -36,7 +42,7 @@ final class TableViewHandler {
     private func createChildHandlers() {
         guard childHandlers.isEmpty else { return }
 
-        childHandlers.append(BannerTableViewHandler(delegate: delegate))
+        childHandlers.append(BannerTableViewHandler())
     }
 }
 

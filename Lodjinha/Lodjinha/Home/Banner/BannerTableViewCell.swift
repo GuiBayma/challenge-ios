@@ -11,7 +11,12 @@ import UIKit
 
 final class BannerTableViewCell: UITableViewCell, Reusable {
 
-    var banners: [Banner]?
+    var banners: [Banner]? {
+        didSet {
+            guard !(banners?.isEmpty ?? true) else { return }
+            // Set page view
+        }
+    }
 
     private lazy var shimmeringView: ShimmerView = {
         let view = ShimmerView()

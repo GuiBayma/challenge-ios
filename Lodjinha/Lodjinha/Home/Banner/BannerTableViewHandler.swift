@@ -13,8 +13,7 @@ final class BannerTableViewHandler {
     private let apiService: BannerApiProtocol
     private var banners: [Banner] = []
 
-    init(apiService: BannerApiProtocol = BannerAPI(), delegate: TableViewHandlerActionDelegate? = nil) {
-        self.delegate = delegate
+    init(apiService: BannerApiProtocol = BannerAPI()) {
         self.apiService = apiService
         fetchBanners()
     }

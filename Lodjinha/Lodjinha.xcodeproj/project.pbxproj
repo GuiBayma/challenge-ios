@@ -46,6 +46,9 @@
 		17BDA46D22A8A21D0044792D /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA46C22A8A21D0044792D /* Reusable.framework */; };
 		17BDA47222A8BD7D0044792D /* BannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47122A8BD7D0044792D /* BannerAPI.swift */; };
 		17BDA47422A8BE5E0044792D /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47322A8BE5E0044792D /* BannerModel.swift */; };
+		17BDA47722A981010044792D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47622A981010044792D /* EndPoint.swift */; };
+		17BDA47D22A9875D0044792D /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47C22A9875D0044792D /* NetworkResponse.swift */; };
+		17BDA47F22A98D110044792D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47E22A98D110044792D /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		17BDA46C22A8A21D0044792D /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
 		17BDA47122A8BD7D0044792D /* BannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAPI.swift; sourceTree = "<group>"; };
 		17BDA47322A8BE5E0044792D /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		17BDA47622A981010044792D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		17BDA47C22A9875D0044792D /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		17BDA47E22A98D110044792D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 				17BDA44F22A84DF70044792D /* Home */,
 				17BDA41722A6CE070044792D /* About */,
 				17BDA46E22A8A9890044792D /* LoadingView */,
+				17BDA47522A95A8A0044792D /* Networking */,
 				17BDA3DB22A5D2FF0044792D /* Resources */,
 				17A9410922A5688E004B9054 /* SupportingFiles */,
 			);
@@ -287,6 +294,16 @@
 				17BDA46A22A893CA0044792D /* ShimmerView.swift */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		17BDA47522A95A8A0044792D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA47622A981010044792D /* EndPoint.swift */,
+				17BDA47C22A9875D0044792D /* NetworkResponse.swift */,
+				17BDA47E22A98D110044792D /* Router.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,7 +496,9 @@
 				17BDA45822A856B70044792D /* HomeView.swift in Sources */,
 				17BDA47222A8BD7D0044792D /* BannerAPI.swift in Sources */,
 				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
+				17BDA47722A981010044792D /* EndPoint.swift in Sources */,
 				17BDA46922A8821B0044792D /* BannerTableViewCell.swift in Sources */,
+				17BDA47D22A9875D0044792D /* NetworkResponse.swift in Sources */,
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
 				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
 				17BDA45A22A856C40044792D /* HomeViewController.swift in Sources */,
@@ -489,6 +508,7 @@
 				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
 				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
 				17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */,
+				17BDA47F22A98D110044792D /* Router.swift in Sources */,
 				17BDA46322A87CF10044792D /* TableViewHandler.swift in Sources */,
 				17BDA44222A7063E0044792D /* main.swift in Sources */,
 				17BDA46722A87FDB0044792D /* BannerTableViewHandler.swift in Sources */,

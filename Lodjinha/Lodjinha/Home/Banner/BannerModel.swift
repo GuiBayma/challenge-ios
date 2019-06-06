@@ -13,8 +13,8 @@ struct BannerData: Decodable {
 }
 
 struct BannerResponse: Decodable {
-    var urlImagem: URL
-    var linkUrl: URL
+    var urlImagem: String
+    var linkUrl: String
 }
 
 struct Banner {
