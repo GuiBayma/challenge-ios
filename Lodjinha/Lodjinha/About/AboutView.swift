@@ -101,6 +101,6 @@ extension AboutView: ViewConfiguration {
     }
 
     func configureViews() {
-        backgroundColor = .white
+        backgroundColor = UIColor.Background.White
     }
 }

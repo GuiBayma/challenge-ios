@@ -10,12 +10,29 @@ import UIKit
 
 final class HomeView: UIView {
 
+    typealias TableViewDelegateDataSource = UITableViewDelegate & UITableViewDataSource
+
+    private lazy var tableView: UITableView = {
+        let table: UITableView = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 100
+        table.tableFooterView = UIView()
+        table.separatorStyle = .none
+
+        table.register(cellType: BannerTableViewCell.self)
+
+        return table
+    }()
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override init(frame: CGRect = .zero) {
+    init(delegateSource: TableViewDelegateDataSource, frame: CGRect = .zero) {
         super.init(frame: frame)
+        tableView.delegate = delegateSource
+        tableView.dataSource = delegateSource
         setupView()
     }
 }
@@ -23,7 +40,15 @@ final class HomeView: UIView {
 // MARK: - ViewConfiguration
 
 extension HomeView: ViewConfiguration {
+    func setupViewHierarchy() {
+        addSubview(tableView)
+    }
+
+    func setupConstraints() {
+        tableView.anchorTo(view: self)
+    }
+
     func configureViews() {
-        backgroundColor = .white
+        backgroundColor = UIColor.Background.White
     }
 }

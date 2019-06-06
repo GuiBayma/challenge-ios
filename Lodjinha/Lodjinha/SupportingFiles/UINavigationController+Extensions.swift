@@ -13,7 +13,7 @@ extension UINavigationController {
     // MARK: - Status Bar Style
 
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return topViewController?.preferredStatusBarStyle ?? .default
+        return .lightContent
     }
 
     // MARK: - Navigation Bar setup

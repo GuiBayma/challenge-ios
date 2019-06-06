@@ -12,10 +12,6 @@ final class AboutViewController: UIViewController {
 
     private let aboutView: AboutView = AboutView()
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     // MARK: - Controller lifecycle
 
     override func loadView() {

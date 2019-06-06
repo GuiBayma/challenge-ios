@@ -27,6 +27,17 @@ extension ViewConfiguration {
 }
 
 extension UIView {
+
+    @discardableResult
+    func anchorTo(view: UIView, inset: CGFloat = 0) -> Self {
+        self
+            .leadingAnchor(equalTo: view.leadingAnchor, constant: inset)
+            .topAnchor(equalTo: view.topAnchor, constant: inset)
+            .trailingAnchor(equalTo: view.trailingAnchor, constant: -inset)
+            .bottomAnchor(equalTo: view.bottomAnchor, constant: -inset)
+        return self
+    }
+
     @discardableResult
     func topAnchor(equalTo anchor: NSLayoutYAxisAnchor, constant: CGFloat = 0) -> Self {
         topAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
@@ -60,6 +71,12 @@ extension UIView {
     @discardableResult
     func heightAnchor(equalTo nsLayoutDimension: NSLayoutDimension, multiplier: CGFloat = 1) -> Self {
         heightAnchor.constraint(equalTo: nsLayoutDimension, multiplier: multiplier).isActive = true
+        return self
+    }
+
+    @discardableResult
+    func heightAnchor(equalTo height: CGFloat) -> Self {
+        heightAnchor.constraint(equalToConstant: height).isActive = true
         return self
     }
 

@@ -10,10 +10,16 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    private let homeView: HomeView = HomeView()
+    private lazy var homeView: HomeView = HomeView(delegateSource: self)
+    private let tableViewHandler: TableViewHandler
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    init(handler: TableViewHandler = TableViewHandler() ) {
+        tableViewHandler = handler
+        super.init(nibName: nil, bundle: nil)
     }
 
     // MARK: - Controller lifecycle
@@ -31,5 +37,25 @@ final class HomeViewController: UIViewController {
 
     private func setupNavigationBar() {
         navigationController?.configureNavigationBar(with: Asset.logoNavbar.image)
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {}
+
+// MARK: - UITableViewDataSource
+
+extension HomeViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return tableViewHandler.numberOfSections()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewHandler.numberOfRowsInSection(section)
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableViewHandler.tableView(tableView, cellForRowAt: indexPath)
     }
 }
