@@ -69,6 +69,12 @@ extension UIView {
     }
 
     @discardableResult
+    func widthAnchor(equalTo width: CGFloat) -> Self {
+        widthAnchor.constraint(equalToConstant: width).isActive = true
+        return self
+    }
+
+    @discardableResult
     func heightAnchor(equalTo nsLayoutDimension: NSLayoutDimension, multiplier: CGFloat = 1) -> Self {
         heightAnchor.constraint(equalTo: nsLayoutDimension, multiplier: multiplier).isActive = true
         return self

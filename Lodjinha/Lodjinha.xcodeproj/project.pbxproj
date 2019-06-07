@@ -49,6 +49,8 @@
 		17BDA47722A981010044792D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47622A981010044792D /* EndPoint.swift */; };
 		17BDA47D22A9875D0044792D /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47C22A9875D0044792D /* NetworkResponse.swift */; };
 		17BDA47F22A98D110044792D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47E22A98D110044792D /* Router.swift */; };
+		17BDA48122A9B57F0044792D /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA48022A9B57F0044792D /* BannerCollectionViewCell.swift */; };
+		17BDA48322A9B75C0044792D /* BannerCollectionViewDelegateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA48222A9B75C0044792D /* BannerCollectionViewDelegateSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		17BDA47622A981010044792D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		17BDA47C22A9875D0044792D /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		17BDA47E22A98D110044792D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		17BDA48022A9B57F0044792D /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		17BDA48222A9B75C0044792D /* BannerCollectionViewDelegateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewDelegateSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,8 +286,10 @@
 			children = (
 				17BDA46622A87FDB0044792D /* BannerTableViewHandler.swift */,
 				17BDA46822A8821B0044792D /* BannerTableViewCell.swift */,
+				17BDA48022A9B57F0044792D /* BannerCollectionViewCell.swift */,
 				17BDA47122A8BD7D0044792D /* BannerAPI.swift */,
 				17BDA47322A8BE5E0044792D /* BannerModel.swift */,
+				17BDA48222A9B75C0044792D /* BannerCollectionViewDelegateSource.swift */,
 			);
 			path = Banner;
 			sourceTree = "<group>";
@@ -510,6 +516,8 @@
 				17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */,
 				17BDA47F22A98D110044792D /* Router.swift in Sources */,
 				17BDA46322A87CF10044792D /* TableViewHandler.swift in Sources */,
+				17BDA48322A9B75C0044792D /* BannerCollectionViewDelegateSource.swift in Sources */,
+				17BDA48122A9B57F0044792D /* BannerCollectionViewCell.swift in Sources */,
 				17BDA44222A7063E0044792D /* main.swift in Sources */,
 				17BDA46722A87FDB0044792D /* BannerTableViewHandler.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,

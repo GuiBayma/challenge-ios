@@ -11,10 +11,13 @@ import UIKit
 final class BannerTableViewHandler {
     weak var delegate: TableViewHandlerActionDelegate?
     private let apiService: BannerApiProtocol
-    private var banners: [Banner] = []
+    private var isCellLoading: Bool = true
+    private let bannerCollectionDelegateSource: BannerCollectionViewDelegateSource
 
-    init(apiService: BannerApiProtocol = BannerAPI()) {
+    init(apiService: BannerApiProtocol = BannerAPI(),
+         bannerCollectionDelegateSource: BannerCollectionViewDelegateSource = BannerCollectionViewDelegateSource()) {
         self.apiService = apiService
+        self.bannerCollectionDelegateSource = bannerCollectionDelegateSource
         fetchBanners()
     }
 
@@ -22,7 +25,8 @@ final class BannerTableViewHandler {
         apiService.getBanners { [weak self] result in
             switch result {
             case let .success(response):
-                self?.getBannerImage(response: response.data)
+                let banners: [BannerResponse] = response.data
+                self?.getBannerImage(response: banners)
             case let .failure(error):
                 print(error.localizedDescription)
             }
@@ -47,7 +51,8 @@ final class BannerTableViewHandler {
         }
 
         dispatchGroup.notify(queue: DispatchQueue.main) {
-            self.banners = banners
+            self.isCellLoading = false
+            self.bannerCollectionDelegateSource.setBanners(banners)
             self.delegate?.updateTableView(section: 0)
         }
     }
@@ -62,7 +67,10 @@ extension BannerTableViewHandler: TableViewHandlerDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as BannerTableViewCell
-        cell.banners = banners
+        cell.setCollectionViewDelegateDataSource(bannerCollectionDelegateSource)
+        if !isCellLoading {
+            cell.updateCollectionView()
+        }
         return cell
     }
 }

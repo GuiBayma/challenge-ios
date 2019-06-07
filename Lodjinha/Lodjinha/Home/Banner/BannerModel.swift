@@ -13,10 +13,12 @@ struct BannerData: Decodable {
 }
 
 struct BannerResponse: Decodable {
+    // swiftlint:disable identifier_name
+    var id: Int
     var urlImagem: String
     var linkUrl: String
 }
 
 struct Banner {
-    var image: UIImage
+    var image: UIImage?
 }

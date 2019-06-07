@@ -11,18 +11,37 @@ import UIKit
 
 final class BannerTableViewCell: UITableViewCell, Reusable {
 
-    var banners: [Banner]? {
-        didSet {
-            guard !(banners?.isEmpty ?? true) else { return }
-            // Set page view
-        }
-    }
+    typealias CollectionViewDelegateDataSource = UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
 
     private lazy var shimmeringView: ShimmerView = {
         let view = ShimmerView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
         return view
+    }()
+
+    private lazy var collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = CGSize(width: 1, height: 1)
+
+        let collection: UICollectionView = UICollectionView(frame: .zero,
+                                                            collectionViewLayout: layout)
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.register(cellType: BannerCollectionViewCell.self)
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.isPagingEnabled = true
+        collection.backgroundColor = UIColor.Background.White
+        return collection
+    }()
+
+    private let pageControl: UIPageControl = {
+        let control: UIPageControl = UIPageControl()
+        control.translatesAutoresizingMaskIntoConstraints = false
+        control.pageIndicatorTintColor = UIColor.Background.LightGray
+        control.currentPageIndicatorTintColor = UIColor.Background.White
+        return control
     }()
 
     required init?(coder aDecoder: NSCoder) {
@@ -32,6 +51,23 @@ final class BannerTableViewCell: UITableViewCell, Reusable {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
+    }
+
+    // MARK: - Set CollectionViewDelegateDataSource
+
+    func setCollectionViewDelegateDataSource(_ source: CollectionViewDelegateDataSource) {
+        collectionView.delegate = source
+        collectionView.dataSource = source
+    }
+
+    // MARK: - Show collection view
+
+    func updateCollectionView() {
+        shimmeringView.removeFromSuperview()
+        contentView.addSubview(collectionView)
+        collectionView
+            .anchorTo(view: contentView)
+            .heightAnchor(equalTo: UIScreen.main.bounds.width * 0.25)
     }
 }
 
