@@ -10,9 +10,9 @@ import func Foundation.NSStringFromClass
 import func UIKit.UIApplicationMain
 
 #if TEST
-let appDelegateClass: String? = nil
+let kAppDelegateClass: String? = nil
 #else
-let appDelegateClass = NSStringFromClass(AppDelegate.self)
+let kAppDelegateClass = NSStringFromClass(AppDelegate.self)
 #endif
 
-_ = UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, appDelegateClass)
+_ = UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, kAppDelegateClass)

@@ -28,7 +28,7 @@ final class BannerCollectionViewDelegateSource: NSObject {
         guard let image = image else { return nil }
 
         let size: CGSize = image.size
-        let widthRatio: CGFloat = targetSize.width  / size.width
+        let widthRatio: CGFloat = targetSize.width / size.width
         let heightRatio: CGFloat = targetSize.height / size.height
 
         let newRatio: CGFloat = widthRatio > heightRatio ? heightRatio : widthRatio

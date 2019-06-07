@@ -22,7 +22,7 @@ final class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont(font: FontFamily.Pacifico.regular, size: 48.0)
-        label.textColor = UIColor.Text.Gray
+        label.textColor = UIColor.DarkGray
         label.textAlignment = .center
         label.text = L10n.brandName
         return label
@@ -32,7 +32,7 @@ final class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        label.textColor = UIColor.Text.Gray
+        label.textColor = UIColor.DarkGray
         label.textAlignment = .center
         label.text = L10n.developerName
         return label
@@ -42,12 +42,13 @@ final class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12, weight: .light)
-        label.textColor = UIColor.Text.Gray
+        label.textColor = UIColor.DarkGray
         label.textAlignment = .center
         label.text = L10n.developmentDate
         return label
     }()
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -101,6 +102,6 @@ extension AboutView: ViewConfiguration {
     }
 
     func configureViews() {
-        backgroundColor = UIColor.Background.White
+        backgroundColor = UIColor.White
     }
 }

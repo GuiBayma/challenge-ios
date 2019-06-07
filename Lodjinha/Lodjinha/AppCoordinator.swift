@@ -25,7 +25,7 @@ final class AppCoordinator {
     }
 
     private func setupTabBar() {
-        tabController.tabBar.tintColor = UIColor.Background.Purple
+        tabController.tabBar.tintColor = UIColor.Purple
         tabController.viewControllers = setupTabControllers()
     }
 

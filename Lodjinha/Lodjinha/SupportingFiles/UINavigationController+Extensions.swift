@@ -12,7 +12,7 @@ extension UINavigationController {
 
     // MARK: - Status Bar Style
 
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
@@ -51,7 +51,7 @@ extension UINavigationController {
 
     private func setupBarBackground() {
         navigationBar.isTranslucent = false
-        navigationBar.barTintColor = UIColor.Background.Purple
+        navigationBar.barTintColor = UIColor.Purple
     }
 
     private func setupBarShadow() {

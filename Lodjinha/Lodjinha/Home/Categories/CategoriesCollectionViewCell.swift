@@ -35,11 +35,12 @@ final class CategoriesCollectionViewCell: UICollectionViewCell, Reusable {
         let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        label.textColor = UIColor.Text.Gray
+        label.textColor = UIColor.DarkGray
         label.textAlignment = .center
         return label
     }()
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

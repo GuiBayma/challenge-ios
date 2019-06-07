@@ -17,7 +17,7 @@ final class CategoriesTableViewCell: UITableViewCell, Reusable {
         let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        label.textColor = UIColor.Text.Gray
+        label.textColor = UIColor.DarkGray
         label.text = L10n.categoriesSectionTitle
         return label
     }()
@@ -25,7 +25,7 @@ final class CategoriesTableViewCell: UITableViewCell, Reusable {
     private lazy var separator: UIView = {
         let view: UIView = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.Background.LightGray
+        view.backgroundColor = UIColor.LightGray
         return view
     }()
 
@@ -40,10 +40,11 @@ final class CategoriesTableViewCell: UITableViewCell, Reusable {
         collection.register(cellType: CategoriesCollectionViewCell.self)
         collection.showsVerticalScrollIndicator = false
         collection.showsHorizontalScrollIndicator = false
-        collection.backgroundColor = UIColor.Background.White
+        collection.backgroundColor = UIColor.White
         return collection
     }()
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

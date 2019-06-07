@@ -15,10 +15,11 @@ final class ShimmerView: UIView {
     private lazy var shinyView: UIView = {
         let view: UIView = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.Background.White
+        view.backgroundColor = UIColor.White
         return view
     }()
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,7 +40,7 @@ final class ShimmerView: UIView {
     private func configureGradientLayer() {
         gradientLayer.frame = shinyView.frame
         gradientLayer.colors = [UIColor.clear.cgColor,
-                                UIColor.Background.White.cgColor,
+                                UIColor.White.cgColor,
                                 UIColor.clear.cgColor]
         gradientLayer.locations = [0, 0.5, 1]
         let angle: CGFloat = 90 * .pi / 180
@@ -72,7 +73,7 @@ extension ShimmerView: ViewConfiguration {
     }
 
     func configureViews() {
-        backgroundColor = UIColor.Background.Gray
+        backgroundColor = UIColor.Gray
         clipsToBounds = true
     }
 }

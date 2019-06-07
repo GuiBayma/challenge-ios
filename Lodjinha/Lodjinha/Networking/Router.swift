@@ -88,7 +88,7 @@ final class Router {
         let urlString = request.url?.absoluteString ?? ""
         let components = NSURLComponents(string: urlString)
 
-        let method = request.httpMethod != nil ? "\(request.httpMethod!)": ""
+        let method = request.httpMethod != nil ? "\(request.httpMethod ?? "")": ""
         let path = "\(components?.path ?? "")"
         let query = "\(components?.query ?? "")"
         let host = "\(components?.host ?? "")"
@@ -126,7 +126,7 @@ final class Router {
             responseLog += "\n\n"
         }
 
-        if let statusCode =  response?.statusCode {
+        if let statusCode = response?.statusCode {
             responseLog += "HTTP \(statusCode) \(path)?\(query)\n"
         }
         if let host = components?.host {

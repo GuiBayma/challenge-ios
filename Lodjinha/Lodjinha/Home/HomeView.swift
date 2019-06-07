@@ -26,6 +26,7 @@ final class HomeView: UIView {
         return table
     }()
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -58,6 +59,6 @@ extension HomeView: ViewConfiguration {
     }
 
     func configureViews() {
-        backgroundColor = UIColor.Background.White
+        backgroundColor = UIColor.White
     }
 }

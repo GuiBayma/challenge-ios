@@ -13,6 +13,7 @@ final class HomeViewController: UIViewController {
     private lazy var homeView: HomeView = HomeView(delegateSource: self)
     private let tableViewHandler: TableViewHandlerDelegate
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

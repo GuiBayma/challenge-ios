@@ -32,10 +32,11 @@ final class BannerTableViewCell: UITableViewCell, Reusable {
         collection.showsVerticalScrollIndicator = false
         collection.showsHorizontalScrollIndicator = false
         collection.isPagingEnabled = true
-        collection.backgroundColor = UIColor.Background.White
+        collection.backgroundColor = UIColor.White
         return collection
     }()
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
