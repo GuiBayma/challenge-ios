@@ -43,18 +43,6 @@ extension CategoriesAPI: CategoriesApiProtocol {
     }
 
     func getCategoryImage(imageUrl: String, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
-        let endpoint: EndPoint = EndPoint(urlString: imageUrl)
-        router.request(endpoint) { result in
-            switch result {
-            case let .success(data):
-                if let image: UIImage = UIImage(data: data) {
-                    completion(.success(image))
-                } else {
-                    completion(.failure(.unableToDecode))
-                }
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
+        router.requestImage(imageUrl, completion: completion)
     }
 }

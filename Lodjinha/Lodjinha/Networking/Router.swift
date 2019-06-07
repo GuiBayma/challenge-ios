@@ -9,13 +9,16 @@
 import UIKit
 
 typealias RouterRequestCompletion = (Result<Data, NetworkError>) -> Void
+typealias RouterImageCompletion = (Result<UIImage, NetworkError>) -> Void
 
 protocol NetworkRouter {
     func request(_ route: EndPoint, completion: @escaping RouterRequestCompletion)
+    func requestImage(_ imageUrl: String, completion: @escaping RouterImageCompletion)
 }
 
 final class Router {
     private var tasks: [URL: [RouterRequestCompletion]] = [:]
+    private var cache: NSCache<AnyObject, AnyObject> = NSCache()
 
     // MARK: - Build URLRequest from EndPoint
 
@@ -181,6 +184,28 @@ extension Router: NetworkRouter {
             completion(Result.failure(error))
         } catch {
             completion(Result.failure(NetworkError.failed))
+        }
+    }
+
+    func requestImage(_ imageUrl: String, completion: @escaping RouterImageCompletion) {
+        if let imageFromCache: UIImage = cache.object(forKey: imageUrl as AnyObject) as? UIImage {
+            completion(.success(imageFromCache))
+            return
+        }
+
+        let endPoint: EndPoint = EndPoint(urlString: imageUrl)
+        request(endPoint) { [weak self] result in
+            switch result {
+            case let .success(data):
+                if let image: UIImage = UIImage(data: data) {
+                    self?.cache.setObject(image, forKey: imageUrl as AnyObject)
+                    completion(.success(image))
+                } else {
+                    completion(.failure(.unableToDecode))
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
         }
     }
 }
