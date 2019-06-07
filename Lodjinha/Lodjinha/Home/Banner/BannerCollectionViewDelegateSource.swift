@@ -13,35 +13,7 @@ final class BannerCollectionViewDelegateSource: NSObject {
     private var banners: [Banner] = []
 
     func setBanners(_ banners: [Banner]) {
-        var bannersCorrectedImages: [Banner] = []
-        banners.forEach { banner in
-            let bannerOldImage: UIImage? = banner.image
-            let targetSize: CGSize = CGSize(width: UIScreen.main.bounds.width, height: 150)
-            let newImage: UIImage? = resizeImage(image: bannerOldImage, targetSize: targetSize)
-            let newBanner: Banner = Banner(image: newImage)
-            bannersCorrectedImages.append(newBanner)
-        }
-        self.banners = bannersCorrectedImages
-    }
-
-    private func resizeImage(image: UIImage?, targetSize: CGSize) -> UIImage? {
-        guard let image = image else { return nil }
-
-        let size: CGSize = image.size
-        let widthRatio: CGFloat = targetSize.width / size.width
-        let heightRatio: CGFloat = targetSize.height / size.height
-
-        let newRatio: CGFloat = widthRatio > heightRatio ? heightRatio : widthRatio
-        let newSize: CGSize = CGSize(width: size.width * newRatio, height: size.height * newRatio)
-
-        let rect: CGRect = CGRect(origin: .zero, size: newSize)
-
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        image.draw(in: rect)
-        let newImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return newImage
+        self.banners = banners
     }
 }
 

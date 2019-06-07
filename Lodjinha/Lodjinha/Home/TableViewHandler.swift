@@ -42,8 +42,8 @@ final class TableViewHandler {
     private func createChildHandlers() {
         guard childHandlers.isEmpty else { return }
 
-        childHandlers.append(BannerTableViewHandler())
-        childHandlers.append(CategoriesTableViewHandler())
+        childHandlers.append(BannerTableViewHandler(section: 0))
+        childHandlers.append(CategoriesTableViewHandler(section: 1))
     }
 }
 

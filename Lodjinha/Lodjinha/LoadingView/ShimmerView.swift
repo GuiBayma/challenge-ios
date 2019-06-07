@@ -59,6 +59,12 @@ final class ShimmerView: UIView {
 
         gradientLayer.add(animation, forKey: animation.keyPath)
     }
+
+    func stopAnimation() {
+        DispatchQueue.main.async {
+            self.gradientLayer.removeAllAnimations()
+        }
+    }
 }
 
 // MARK: - ViewConfiguration

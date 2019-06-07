@@ -11,11 +11,14 @@ import UIKit
 final class BannerTableViewHandler {
     weak var delegate: TableViewHandlerActionDelegate?
     private let apiService: BannerApiProtocol
+    private let section: Int
     private var isCellLoading: Bool = true
     private let bannerCollectionDelegateSource: BannerCollectionViewDelegateSource
 
-    init(apiService: BannerApiProtocol = BannerAPI(),
+    init(section: Int,
+         apiService: BannerApiProtocol = BannerAPI(),
          bannerCollectionDelegateSource: BannerCollectionViewDelegateSource = BannerCollectionViewDelegateSource()) {
+        self.section = section
         self.apiService = apiService
         self.bannerCollectionDelegateSource = bannerCollectionDelegateSource
         fetchBanners()
@@ -25,10 +28,10 @@ final class BannerTableViewHandler {
         apiService.getBanners { [weak self] result in
             switch result {
             case let .success(response):
-                let banners: [BannerResponse] = response.data
+                let banners: [BannerResponse] = response.data.sorted { $0.id < $1.id }
                 self?.getBannerImage(response: banners)
             case let .failure(error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
     }
@@ -44,7 +47,7 @@ final class BannerTableViewHandler {
                 case let .success(response):
                     banners.append(Banner(image: response))
                 case let .failure(error):
-                    print(error.localizedDescription)
+                    print(error)
                 }
                 dispatchGroup.leave()
             }
@@ -53,7 +56,7 @@ final class BannerTableViewHandler {
         dispatchGroup.notify(queue: DispatchQueue.main) {
             self.isCellLoading = false
             self.bannerCollectionDelegateSource.setBanners(banners)
-            self.delegate?.updateTableView(section: 0)
+            self.delegate?.updateTableView(section: self.section)
         }
     }
 }

@@ -56,6 +56,7 @@ final class BannerTableViewCell: UITableViewCell, Reusable {
     // MARK: - Show collection view
 
     func updateCollectionView() {
+        shimmeringView.stopAnimation()
         shimmeringView.removeFromSuperview()
         contentView.addSubview(collectionView)
         collectionView

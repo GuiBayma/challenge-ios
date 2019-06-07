@@ -97,3 +97,11 @@ extension CategoriesTableViewCell: ViewConfiguration {
         selectionStyle = .none
     }
 }
+
+// MARK: - CategoriesTableViewHandlerDelegate
+
+extension CategoriesTableViewCell: CategoriesTableViewHandlerDelegate {
+    func updateCollectionView(at item: Int) {
+        collectionView.reloadItems(at: [IndexPath(item: item, section: 0)])
+    }
+}

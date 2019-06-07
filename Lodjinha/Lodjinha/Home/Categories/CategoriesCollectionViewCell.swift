@@ -9,7 +9,14 @@
 import Reusable
 import UIKit
 
+protocol CategoriesCollectionViewCellDelegate: AnyObject {
+    func categoriesCollectionViewCell(_ cell: CategoriesCollectionViewCell, getImage urlString: String)
+}
+
 final class CategoriesCollectionViewCell: UICollectionViewCell, Reusable {
+
+    weak var delegate: CategoriesCollectionViewCellDelegate?
+    var index: Int = 0
 
     private lazy var shimmeringImageView: ShimmerView = {
         let view = ShimmerView()
@@ -37,6 +44,8 @@ final class CategoriesCollectionViewCell: UICollectionViewCell, Reusable {
         label.font = UIFont.systemFont(ofSize: 14, weight: .light)
         label.textColor = UIColor.DarkGray
         label.textAlignment = .center
+        label.numberOfLines = 0
+        label.text = "PLACEHOLDER\nTEXT"
         return label
     }()
 
@@ -52,12 +61,27 @@ final class CategoriesCollectionViewCell: UICollectionViewCell, Reusable {
 
     // MARK: - Setters
 
-    func setImage(_ image: UIImage?) {
-        imageView.image = image
+    func setCategory(description: String, imageUrl: String, image: UIImage?) {
+        setDescription(description)
+        if let image = image {
+            setImage(image)
+        } else {
+            delegate?.categoriesCollectionViewCell(self, getImage: imageUrl)
+        }
     }
 
-    func setDescription(_ text: String) {
-        descriptionLabel.text = text
+    private func setImage(_ image: UIImage) {
+        imageView.setImage(image, targetSize: CGSize(width: 80, height: 80))
+        contentView.bringSubviewToFront(imageView)
+        shimmeringImageView.stopAnimation()
+        shimmeringImageView.removeFromSuperview()
+    }
+
+    private func setDescription(_ description: String) {
+        descriptionLabel.text = description
+        contentView.bringSubviewToFront(descriptionLabel)
+        shimmeringLabelView.stopAnimation()
+        shimmeringLabelView.removeFromSuperview()
     }
 }
 
@@ -74,18 +98,24 @@ extension CategoriesCollectionViewCell: ViewConfiguration {
     func setupConstraints() {
         let margin: CGFloat = 5
 
-        shimmeringImageView
+        imageView
             .leadingAnchor(equalTo: contentView.leadingAnchor, constant: margin)
             .topAnchor(equalTo: contentView.topAnchor, constant: margin)
             .trailingAnchor(equalTo: contentView.trailingAnchor, constant: -margin)
-            .heightAnchor(equalTo: 80)
-            .widthAnchor(equalTo: 80)
 
-        shimmeringLabelView
-            .leadingAnchor(equalTo: shimmeringImageView.leadingAnchor)
-            .topAnchor(equalTo: shimmeringImageView.bottomAnchor, constant: margin)
-            .trailingAnchor(equalTo: shimmeringImageView.trailingAnchor)
+        shimmeringImageView.anchorTo(view: imageView)
+
+        descriptionLabel
+            .leadingAnchor(equalTo: imageView.leadingAnchor)
+            .topAnchor(equalTo: imageView.bottomAnchor, constant: margin)
+            .trailingAnchor(equalTo: imageView.trailingAnchor)
             .bottomAnchor(equalTo: contentView.bottomAnchor, constant: -margin)
-            .heightAnchor(equalTo: 30)
+
+        shimmeringLabelView.anchorTo(view: descriptionLabel)
+    }
+
+    func configureViews() {
+        contentView.bringSubviewToFront(shimmeringImageView)
+        contentView.bringSubviewToFront(shimmeringLabelView)
     }
 }

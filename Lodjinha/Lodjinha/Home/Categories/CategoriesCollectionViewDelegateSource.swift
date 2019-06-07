@@ -10,29 +10,51 @@ import UIKit
 
 final class CategoriesCollectionViewDelegateSource: NSObject {
 
+    weak var cellDelegate: CategoriesCollectionViewCellDelegate?
     private var categories: [Category] = []
+
+    init(cellDelegate: CategoriesCollectionViewCellDelegate) {
+        self.cellDelegate = cellDelegate
+    }
 
     func setCategories(_ categories: [Category]) {
         self.categories = categories
+    }
+
+    func updateCategory(with image: UIImage, at index: Int) {
+        categories[index].image = image
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension CategoriesCollectionViewDelegateSource: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 140)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension CategoriesCollectionViewDelegateSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return categories.count
-        return 3
+        if categories.isEmpty {
+            return 3
+        }
+        return categories.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as CategoriesCollectionViewCell
+        cell.delegate = cellDelegate
+        cell.index = indexPath.item
+        if categories.indices.contains(indexPath.item) {
+            let category: Category = categories[indexPath.item]
+            cell.setCategory(description: category.description, imageUrl: category.imageUrlString, image: category.image)
+        }
         return cell
     }
 }

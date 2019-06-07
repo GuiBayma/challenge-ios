@@ -30,7 +30,7 @@ final class BannerCollectionViewCell: UICollectionViewCell, Reusable {
     // MARK: - Set image
 
     func setImage(_ image: UIImage?) {
-        imageView.image = image
+        imageView.setImage(image, targetSize: CGSize(width: UIScreen.main.bounds.width, height: 150))
     }
 }
 
