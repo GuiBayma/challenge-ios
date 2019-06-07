@@ -12,11 +12,12 @@ typealias RouterRequestCompletion = (Result<Data, NetworkError>) -> Void
 
 protocol NetworkRouter {
     func request(_ route: EndPoint, completion: @escaping RouterRequestCompletion)
-    func cancel()
 }
 
 final class Router {
-    private var task: URLSessionTask?
+    private var tasks: [URL: [RouterRequestCompletion]] = [:]
+
+    // MARK: - Build URLRequest from EndPoint
 
     private func buildRequest(from endPoint: EndPoint) throws -> URLRequest {
         guard let url = endPoint.url else {
@@ -40,6 +41,8 @@ final class Router {
             request.setValue(value, forHTTPHeaderField: key)
         }
     }
+
+    // MARK: - Handle Response
 
     private func handleResponse(data: Data?, response: URLResponse?, error: Error?) -> Result<Data, NetworkError> {
         if error != nil {
@@ -68,12 +71,83 @@ final class Router {
         }
     }
 
+    // MARK: - Handle Succes (after response)
+
     private func handleSucces(_ data: Data?) -> Result<Data, NetworkError> {
         if let responseData: Data = data {
             return .success(responseData)
         } else {
             return .failure(.noData)
         }
+    }
+
+    // MARK: - Log Network calls
+
+    private func log(_ request: URLRequest) {
+
+        let urlString = request.url?.absoluteString ?? ""
+        let components = NSURLComponents(string: urlString)
+
+        let method = request.httpMethod != nil ? "\(request.httpMethod!)": ""
+        let path = "\(components?.path ?? "")"
+        let query = "\(components?.query ?? "")"
+        let host = "\(components?.host ?? "")"
+
+        var requestLog = "\n---------- REQUEST ---------->\n"
+        requestLog += "\(urlString)"
+        requestLog += "\n\n"
+        requestLog += "\(method) \(path)?\(query) HTTP/1.1\n"
+        requestLog += "Host: \(host)\n"
+        for (key, value) in request.allHTTPHeaderFields ?? [:] {
+            requestLog += "\(key): \(value)\n"
+        }
+        if let body = request.httpBody {
+            if let bodyString: String = String(data: body, encoding: String.Encoding.utf8) {
+                requestLog += "\n\(bodyString)\n"
+            }
+        }
+
+        requestLog += "\n------------------------->\n"
+        print(requestLog)
+    }
+
+    private func log(data: Data?, response: URLResponse?, error: Error?) {
+        let response = response as? HTTPURLResponse
+
+        let urlString = response?.url?.absoluteString
+        let components = NSURLComponents(string: urlString ?? "")
+
+        let path = "\(components?.path ?? "")"
+        let query = "\(components?.query ?? "")"
+
+        var responseLog = "\n<---------- RESPONSE ----------\n"
+        if let urlString = urlString {
+            responseLog += "\(urlString)"
+            responseLog += "\n\n"
+        }
+
+        if let statusCode =  response?.statusCode {
+            responseLog += "HTTP \(statusCode) \(path)?\(query)\n"
+        }
+        if let host = components?.host {
+            responseLog += "Host: \(host)\n"
+        }
+        for (key, value) in response?.allHeaderFields ?? [:] {
+            responseLog += "\(key): \(value)\n"
+        }
+        if let body = data {
+            if let bodyString: String = String(data: body, encoding: String.Encoding.utf8) {
+                responseLog += "\n\(bodyString)\n"
+            } else {
+                responseLog += "\nIMAGE DATA\n"
+            }
+        }
+        if let error = error {
+            responseLog += "\nError: \(String(describing: error.localizedDescription))\n"
+        }
+
+        responseLog += "<------------------------\n"
+        print(responseLog)
     }
 }
 
@@ -85,19 +159,28 @@ extension Router: NetworkRouter {
 
         do {
             let request: URLRequest = try buildRequest(from: route)
-            task = session.dataTask(with: request) { [unowned self] data, response, error in
-                completion(self.handleResponse(data: data, response: response, error: error))
+            guard let url = request.url else { completion(.failure(.badURL)); return }
+
+            if tasks.keys.contains(url) {
+                tasks[url]?.append(completion)
+            } else {
+                tasks[url] = [completion]
+                log(request)
+                _ = session.dataTask(with: request) { [unowned self] data, response, error in
+                    DispatchQueue.main.async {
+                        self.log(data: data, response: response, error: error)
+                        guard let completionHandlers = self.tasks[url] else { completion(.failure(.failed)); return }
+                        completionHandlers.forEach { _ in
+                            completion(self.handleResponse(data: data, response: response, error: error))
+                        }
+                    }
+                }.resume()
             }
+
         } catch let error as NetworkError {
             completion(Result.failure(error))
         } catch {
             completion(Result.failure(NetworkError.failed))
         }
-
-        task?.resume()
-    }
-
-    func cancel() {
-        task?.cancel()
     }
 }
