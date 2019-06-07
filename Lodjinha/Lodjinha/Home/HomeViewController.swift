@@ -60,6 +60,14 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return tableViewHandler.tableView(tableView, cellForRowAt: indexPath)
     }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableViewHandler.tableView(tableView, viewForHeaderInSection: section)
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return tableViewHandler.tableView(tableView, heightForHeaderInSection: section)
+    }
 }
 
 // MARK: - TableViewHandlerActionDelegate

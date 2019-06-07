@@ -58,6 +58,12 @@
 		17BDA4B022AAAF890044792D /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4AF22AAAF890044792D /* CategoriesModel.swift */; };
 		17BDA4B222AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4B122AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift */; };
 		17BDA4B422AAEC3F0044792D /* UIImageView+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4B322AAEC3F0044792D /* UIImageView+Size.swift */; };
+		17BDA4B822AB01F40044792D /* BestSellersTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4B722AB01F40044792D /* BestSellersTableViewHandler.swift */; };
+		17BDA4BC22AB06B30044792D /* BestSellerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4BB22AB06B30044792D /* BestSellerTableViewCell.swift */; };
+		17BDA4BE22AB07D30044792D /* BestSellersSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4BD22AB07D30044792D /* BestSellersSectionHeaderView.swift */; };
+		17BDA4C022AB0C1D0044792D /* BestSellersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4BF22AB0C1D0044792D /* BestSellersAPI.swift */; };
+		17BDA4C222AB0C2B0044792D /* BestSellersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4C122AB0C2B0044792D /* BestSellersModel.swift */; };
+		17BDA4C422AB124F0044792D /* BestSellersShimmeringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4C322AB124F0044792D /* BestSellersShimmeringTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +145,12 @@
 		17BDA4AF22AAAF890044792D /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		17BDA4B122AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewDelegateSource.swift; sourceTree = "<group>"; };
 		17BDA4B322AAEC3F0044792D /* UIImageView+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Size.swift"; sourceTree = "<group>"; };
+		17BDA4B722AB01F40044792D /* BestSellersTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersTableViewHandler.swift; sourceTree = "<group>"; };
+		17BDA4BB22AB06B30044792D /* BestSellerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerTableViewCell.swift; sourceTree = "<group>"; };
+		17BDA4BD22AB07D30044792D /* BestSellersSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersSectionHeaderView.swift; sourceTree = "<group>"; };
+		17BDA4BF22AB0C1D0044792D /* BestSellersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersAPI.swift; sourceTree = "<group>"; };
+		17BDA4C122AB0C2B0044792D /* BestSellersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersModel.swift; sourceTree = "<group>"; };
+		17BDA4C322AB124F0044792D /* BestSellersShimmeringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersShimmeringTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +295,7 @@
 				17BDA46222A87CF10044792D /* TableViewHandler.swift */,
 				17BDA45D22A86AC70044792D /* Banner */,
 				17BDA4A622AAAD5C0044792D /* Categories */,
+				17BDA4B622AB01BA0044792D /* BestSellers */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -347,6 +360,19 @@
 				17BDA4B322AAEC3F0044792D /* UIImageView+Size.swift */,
 			);
 			path = GlobalExtensions;
+			sourceTree = "<group>";
+		};
+		17BDA4B622AB01BA0044792D /* BestSellers */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA4B722AB01F40044792D /* BestSellersTableViewHandler.swift */,
+				17BDA4C322AB124F0044792D /* BestSellersShimmeringTableViewCell.swift */,
+				17BDA4BD22AB07D30044792D /* BestSellersSectionHeaderView.swift */,
+				17BDA4BB22AB06B30044792D /* BestSellerTableViewCell.swift */,
+				17BDA4BF22AB0C1D0044792D /* BestSellersAPI.swift */,
+				17BDA4C122AB0C2B0044792D /* BestSellersModel.swift */,
+			);
+			path = BestSellers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,32 +567,38 @@
 				17BDA4AE22AAAF7E0044792D /* CategoriesAPI.swift in Sources */,
 				17BDA47222A8BD7D0044792D /* BannerAPI.swift in Sources */,
 				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
+				17BDA4C222AB0C2B0044792D /* BestSellersModel.swift in Sources */,
 				17BDA47722A981010044792D /* EndPoint.swift in Sources */,
 				17BDA4AA22AAAE440044792D /* CategoriesTableViewCell.swift in Sources */,
 				17BDA46922A8821B0044792D /* BannerTableViewCell.swift in Sources */,
 				17BDA47D22A9875D0044792D /* NetworkResponse.swift in Sources */,
 				17BDA4AC22AAAF600044792D /* CategoriesCollectionViewCell.swift in Sources */,
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
+				17BDA4C022AB0C1D0044792D /* BestSellersAPI.swift in Sources */,
 				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
 				17BDA45A22A856C40044792D /* HomeViewController.swift in Sources */,
 				17BDA46B22A893CA0044792D /* ShimmerView.swift in Sources */,
+				17BDA4B822AB01F40044792D /* BestSellersTableViewHandler.swift in Sources */,
 				17BDA41F22A6E7B40044792D /* UINavigationController+Extensions.swift in Sources */,
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
 				17BDA4B022AAAF890044792D /* CategoriesModel.swift in Sources */,
 				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
+				17BDA4C422AB124F0044792D /* BestSellersShimmeringTableViewCell.swift in Sources */,
 				17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */,
 				17BDA47F22A98D110044792D /* Router.swift in Sources */,
 				17BDA46322A87CF10044792D /* TableViewHandler.swift in Sources */,
 				17BDA48322A9B75C0044792D /* BannerCollectionViewDelegateSource.swift in Sources */,
 				17BDA48122A9B57F0044792D /* BannerCollectionViewCell.swift in Sources */,
 				17BDA44222A7063E0044792D /* main.swift in Sources */,
+				17BDA4BC22AB06B30044792D /* BestSellerTableViewCell.swift in Sources */,
 				17BDA46722A87FDB0044792D /* BannerTableViewHandler.swift in Sources */,
 				17BDA3D822A5B8680044792D /* AppCoordinator.swift in Sources */,
 				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,
 				17BDA47422A8BE5E0044792D /* BannerModel.swift in Sources */,
 				17BDA4B422AAEC3F0044792D /* UIImageView+Size.swift in Sources */,
+				17BDA4BE22AB07D30044792D /* BestSellersSectionHeaderView.swift in Sources */,
 				17BDA4A822AAAD950044792D /* CategoriesTableViewHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

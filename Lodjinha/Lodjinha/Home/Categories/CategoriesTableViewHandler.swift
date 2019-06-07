@@ -17,7 +17,6 @@ final class CategoriesTableViewHandler {
     private weak var collectionDelegate: CategoriesTableViewHandlerDelegate?
     private let apiService: CategoriesApiProtocol
     private let section: Int
-    private var isCellLoading: Bool = true
     private lazy var categoriesCollectionDelegateSource = CategoriesCollectionViewDelegateSource(cellDelegate: self)
 
     init(section: Int, apiService: CategoriesApiProtocol = CategoriesAPI()) {
@@ -46,10 +45,6 @@ final class CategoriesTableViewHandler {
 // MARK: - TableViewHandlerDelegate
 
 extension CategoriesTableViewHandler: TableViewHandlerDelegate {
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return 1
-    }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CategoriesTableViewCell
         cell.setCollectionViewDelegateDataSource(categoriesCollectionDelegateSource)

@@ -17,11 +17,15 @@ final class HomeView: UIView {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 100
+        table.estimatedSectionHeaderHeight = 40
+        table.sectionHeaderHeight = UITableView.automaticDimension
         table.tableFooterView = UIView()
         table.separatorStyle = .none
 
         table.register(cellType: BannerTableViewCell.self)
         table.register(cellType: CategoriesTableViewCell.self)
+        table.register(cellType: BestSellersShimmeringTableViewCell.self)
+        table.register(cellType: BestSellerTableViewCell.self)
 
         return table
     }()

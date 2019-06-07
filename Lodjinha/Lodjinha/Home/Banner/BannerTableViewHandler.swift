@@ -64,10 +64,6 @@ final class BannerTableViewHandler {
 // MARK: - TableViewHandlerDelegate
 
 extension BannerTableViewHandler: TableViewHandlerDelegate {
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return 1
-    }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as BannerTableViewCell
         cell.setCollectionViewDelegateDataSource(bannerCollectionDelegateSource)

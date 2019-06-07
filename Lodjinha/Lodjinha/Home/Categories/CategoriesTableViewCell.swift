@@ -80,7 +80,7 @@ extension CategoriesTableViewCell: ViewConfiguration {
 
         separator
             .leadingAnchor(equalTo: contentView.leadingAnchor)
-            .topAnchor(equalTo: titleLabel.bottomAnchor, constant: 2)
+            .topAnchor(equalTo: titleLabel.bottomAnchor, constant: 5)
             .trailingAnchor(equalTo: contentView.trailingAnchor)
             .heightAnchor(equalTo: 1)
 

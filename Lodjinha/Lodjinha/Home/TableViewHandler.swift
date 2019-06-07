@@ -13,10 +13,15 @@ protocol TableViewHandlerDelegate: AnyObject {
     func numberOfSections() -> Int
     func numberOfRowsInSection(_ section: Int) -> Int
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
 }
 
 extension TableViewHandlerDelegate {
     func numberOfSections() -> Int { return 1 }
+    func numberOfRowsInSection(_ section: Int) -> Int { return 1 }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { return nil }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 0 }
 }
 
 protocol TableViewHandlerActionDelegate: AnyObject {
@@ -44,6 +49,7 @@ final class TableViewHandler {
 
         childHandlers.append(BannerTableViewHandler(section: 0))
         childHandlers.append(CategoriesTableViewHandler(section: 1))
+        childHandlers.append(BestSellersTableViewHandler(section: 2))
     }
 }
 
@@ -60,5 +66,13 @@ extension TableViewHandler: TableViewHandlerDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return childHandlers[indexPath.section].tableView(tableView, cellForRowAt: indexPath)
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return childHandlers[section].tableView(tableView, viewForHeaderInSection: section)
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return childHandlers[section].tableView(tableView, heightForHeaderInSection: section)
     }
 }
