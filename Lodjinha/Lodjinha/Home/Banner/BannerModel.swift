@@ -20,5 +20,6 @@ struct BannerResponse: Decodable {
 }
 
 struct Banner {
+    var id: Int
     var image: UIImage?
 }

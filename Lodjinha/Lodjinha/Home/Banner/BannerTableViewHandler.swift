@@ -28,8 +28,7 @@ final class BannerTableViewHandler {
         apiService.getBanners { [weak self] result in
             switch result {
             case let .success(response):
-                let banners: [BannerResponse] = response.data.sorted { $0.id < $1.id }
-                self?.getBannerImage(response: banners)
+                self?.getBannerImage(response: response.data)
             case let .failure(error):
                 print(error)
             }
@@ -45,7 +44,7 @@ final class BannerTableViewHandler {
             apiService.getBannerImage(imageUrl: banner.urlImagem) { result in
                 switch result {
                 case let .success(response):
-                    banners.append(Banner(image: response))
+                    banners.append(Banner(id: banner.id, image: response))
                 case let .failure(error):
                     print(error)
                 }
@@ -55,7 +54,7 @@ final class BannerTableViewHandler {
 
         dispatchGroup.notify(queue: DispatchQueue.main) {
             self.isCellLoading = false
-            self.bannerCollectionDelegateSource.setBanners(banners)
+            self.bannerCollectionDelegateSource.setBanners(banners.sorted { $0.id < $1.id })
             self.delegate?.updateTableView(section: self.section)
         }
     }
