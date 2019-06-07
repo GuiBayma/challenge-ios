@@ -21,6 +21,7 @@ final class HomeView: UIView {
         table.separatorStyle = .none
 
         table.register(cellType: BannerTableViewCell.self)
+        table.register(cellType: CategoriesTableViewCell.self)
 
         return table
     }()

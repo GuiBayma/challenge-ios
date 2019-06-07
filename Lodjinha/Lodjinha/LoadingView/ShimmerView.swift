@@ -72,7 +72,7 @@ extension ShimmerView: ViewConfiguration {
     }
 
     func configureViews() {
-        backgroundColor = UIColor.Background.LightGray
+        backgroundColor = UIColor.Background.Gray
         clipsToBounds = true
     }
 }

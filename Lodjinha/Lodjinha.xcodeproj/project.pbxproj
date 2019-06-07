@@ -51,6 +51,12 @@
 		17BDA47F22A98D110044792D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA47E22A98D110044792D /* Router.swift */; };
 		17BDA48122A9B57F0044792D /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA48022A9B57F0044792D /* BannerCollectionViewCell.swift */; };
 		17BDA48322A9B75C0044792D /* BannerCollectionViewDelegateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA48222A9B75C0044792D /* BannerCollectionViewDelegateSource.swift */; };
+		17BDA4A822AAAD950044792D /* CategoriesTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4A722AAAD950044792D /* CategoriesTableViewHandler.swift */; };
+		17BDA4AA22AAAE440044792D /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4A922AAAE440044792D /* CategoriesTableViewCell.swift */; };
+		17BDA4AC22AAAF600044792D /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4AB22AAAF600044792D /* CategoriesCollectionViewCell.swift */; };
+		17BDA4AE22AAAF7E0044792D /* CategoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4AD22AAAF7E0044792D /* CategoriesAPI.swift */; };
+		17BDA4B022AAAF890044792D /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4AF22AAAF890044792D /* CategoriesModel.swift */; };
+		17BDA4B222AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4B122AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +131,12 @@
 		17BDA47E22A98D110044792D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		17BDA48022A9B57F0044792D /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		17BDA48222A9B75C0044792D /* BannerCollectionViewDelegateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewDelegateSource.swift; sourceTree = "<group>"; };
+		17BDA4A722AAAD950044792D /* CategoriesTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewHandler.swift; sourceTree = "<group>"; };
+		17BDA4A922AAAE440044792D /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		17BDA4AB22AAAF600044792D /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		17BDA4AD22AAAF7E0044792D /* CategoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAPI.swift; sourceTree = "<group>"; };
+		17BDA4AF22AAAF890044792D /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		17BDA4B122AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewDelegateSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +281,7 @@
 				17BDA45722A856B70044792D /* HomeView.swift */,
 				17BDA46222A87CF10044792D /* TableViewHandler.swift */,
 				17BDA45D22A86AC70044792D /* Banner */,
+				17BDA4A622AAAD5C0044792D /* Categories */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -310,6 +323,19 @@
 				17BDA47E22A98D110044792D /* Router.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		17BDA4A622AAAD5C0044792D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				17BDA4A722AAAD950044792D /* CategoriesTableViewHandler.swift */,
+				17BDA4A922AAAE440044792D /* CategoriesTableViewCell.swift */,
+				17BDA4AB22AAAF600044792D /* CategoriesCollectionViewCell.swift */,
+				17BDA4AD22AAAF7E0044792D /* CategoriesAPI.swift */,
+				17BDA4AF22AAAF890044792D /* CategoriesModel.swift */,
+				17BDA4B122AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,13 +524,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BDA4B222AAAF960044792D /* CategoriesCollectionViewDelegateSource.swift in Sources */,
 				17BDA44E22A82B8A0044792D /* AboutCoordinator.swift in Sources */,
 				17BDA45822A856B70044792D /* HomeView.swift in Sources */,
+				17BDA4AE22AAAF7E0044792D /* CategoriesAPI.swift in Sources */,
 				17BDA47222A8BD7D0044792D /* BannerAPI.swift in Sources */,
 				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
 				17BDA47722A981010044792D /* EndPoint.swift in Sources */,
+				17BDA4AA22AAAE440044792D /* CategoriesTableViewCell.swift in Sources */,
 				17BDA46922A8821B0044792D /* BannerTableViewCell.swift in Sources */,
 				17BDA47D22A9875D0044792D /* NetworkResponse.swift in Sources */,
+				17BDA4AC22AAAF600044792D /* CategoriesCollectionViewCell.swift in Sources */,
 				17BDA3EA22A600F80044792D /* ImageAssets.swift in Sources */,
 				17BDA41322A6104A0044792D /* LocalizableStrings.swift in Sources */,
 				17BDA45A22A856C40044792D /* HomeViewController.swift in Sources */,
@@ -512,6 +542,7 @@
 				17BDA41F22A6E7B40044792D /* UINavigationController+Extensions.swift in Sources */,
 				17BDA3E922A600F80044792D /* Fonts.swift in Sources */,
 				17BDA41D22A6CECB0044792D /* UIView+Anchors.swift in Sources */,
+				17BDA4B022AAAF890044792D /* CategoriesModel.swift in Sources */,
 				17BDA41922A6CE560044792D /* AboutViewController.swift in Sources */,
 				17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */,
 				17BDA47F22A98D110044792D /* Router.swift in Sources */,
@@ -524,6 +555,7 @@
 				17BDA3E522A5FB2E0044792D /* Colors.swift in Sources */,
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,
 				17BDA47422A8BE5E0044792D /* BannerModel.swift in Sources */,
+				17BDA4A822AAAD950044792D /* CategoriesTableViewHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

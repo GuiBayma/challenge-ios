@@ -14,3 +14,7 @@
 "BRAND_NAME" = "a Lodjinha";
 "DEVELOPER_NAME" = "Guilherme Bayma";
 "DEVELOPMENT_DATE" = "04 de junho de 2019";
+
+// Home
+"CATEGORIES_SECTION_TITLE" = "Categorias";
+"BEST_SELLERS_SECTION_TITLE" = "Mais vendidos";

@@ -13,8 +13,12 @@ import Foundation
 internal enum L10n {
   /// About
   internal static let aboutTab = L10n.tr("Localizable", "ABOUT_TAB")
+  /// Best sellers
+  internal static let bestSellersSectionTitle = L10n.tr("Localizable", "BEST_SELLERS_SECTION_TITLE")
   /// a Lodjinha
   internal static let brandName = L10n.tr("Localizable", "BRAND_NAME")
+  /// Categories
+  internal static let categoriesSectionTitle = L10n.tr("Localizable", "CATEGORIES_SECTION_TITLE")
   /// Guilherme Bayma
   internal static let developerName = L10n.tr("Localizable", "DEVELOPER_NAME")
   /// June 04, 2019

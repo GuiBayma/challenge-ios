@@ -1,22 +1,31 @@
 //
-//  BannerTableViewCell.swift
+//  CategoriesTableViewCell.swift
 //  Lodjinha
 //
-//  Created by Guilherme Bayma on 05/06/19.
+//  Created by Guilherme Bayma on 07/06/19.
 //  Copyright © 2019 Guilherme Bayma. All rights reserved.
 //
 
 import Reusable
 import UIKit
 
-final class BannerTableViewCell: UITableViewCell, Reusable {
+final class CategoriesTableViewCell: UITableViewCell, Reusable {
 
     typealias CollectionViewDelegateDataSource = UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
 
-    private lazy var shimmeringView: ShimmerView = {
-        let view = ShimmerView()
+    private lazy var titleLabel: UILabel = {
+        let label: UILabel = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.textColor = UIColor.Text.Gray
+        label.text = L10n.categoriesSectionTitle
+        return label
+    }()
+
+    private lazy var separator: UIView = {
+        let view: UIView = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 10
+        view.backgroundColor = UIColor.Background.LightGray
         return view
     }()
 
@@ -28,10 +37,9 @@ final class BannerTableViewCell: UITableViewCell, Reusable {
         let collection: UICollectionView = UICollectionView(frame: .zero,
                                                             collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.register(cellType: BannerCollectionViewCell.self)
+        collection.register(cellType: CategoriesCollectionViewCell.self)
         collection.showsVerticalScrollIndicator = false
         collection.showsHorizontalScrollIndicator = false
-        collection.isPagingEnabled = true
         collection.backgroundColor = UIColor.Background.White
         return collection
     }()
@@ -51,29 +59,36 @@ final class BannerTableViewCell: UITableViewCell, Reusable {
         collectionView.delegate = source
         collectionView.dataSource = source
     }
-
-    // MARK: - Show collection view
-
-    func updateCollectionView() {
-        shimmeringView.removeFromSuperview()
-        contentView.addSubview(collectionView)
-        collectionView
-            .anchorTo(view: contentView)
-            .heightAnchor(equalTo: UIScreen.main.bounds.width * 0.25)
-    }
 }
 
 // MARK: - ViewConfiguration
 
-extension BannerTableViewCell: ViewConfiguration {
+extension CategoriesTableViewCell: ViewConfiguration {
     func setupViewHierarchy() {
-        contentView.addSubview(shimmeringView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(separator)
+        contentView.addSubview(collectionView)
     }
 
     func setupConstraints() {
-        shimmeringView
-            .anchorTo(view: contentView, inset: 5)
-            .heightAnchor(equalTo: 120)
+        let margin: CGFloat = 15
+
+        titleLabel
+            .leadingAnchor(equalTo: contentView.leadingAnchor, constant: margin)
+            .topAnchor(equalTo: contentView.topAnchor, constant: margin)
+
+        separator
+            .leadingAnchor(equalTo: contentView.leadingAnchor)
+            .topAnchor(equalTo: titleLabel.bottomAnchor, constant: 2)
+            .trailingAnchor(equalTo: contentView.trailingAnchor)
+            .heightAnchor(equalTo: 1)
+
+        collectionView
+            .leadingAnchor(equalTo: contentView.leadingAnchor)
+            .topAnchor(equalTo: separator.bottomAnchor, constant: 2)
+            .trailingAnchor(equalTo: contentView.trailingAnchor)
+            .bottomAnchor(equalTo: contentView.bottomAnchor)
+            .heightAnchor(equalTo: 150)
     }
 
     func configureViews() {

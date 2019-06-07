@@ -20,13 +20,15 @@ extension UIColor {
                                              blue: 143.0/255.0,
                                              alpha: 1.0)
 
-        static let LightGray: UIColor = UIColor(red: 220.0/255.0,
-                                                green: 220.0/255.0,
-                                                blue: 220.0/255.0,
-                                                alpha: 1.0)
+        static let Gray: UIColor = UIColor(red: 220.0/255.0,
+                                           green: 220.0/255.0,
+                                           blue: 220.0/255.0,
+                                           alpha: 1.0)
 
-        static let DarkGray: UIColor = UIColor(white: 1,
-                                               alpha: 0.4)
+        static let LightGray: UIColor = UIColor(red: 240.0/255.0,
+                                                green: 240.0/255.0,
+                                                blue: 240.0/255.0,
+                                                alpha: 1.0)
     }
 
     struct Text {

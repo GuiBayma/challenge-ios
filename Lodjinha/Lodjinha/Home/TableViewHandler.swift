@@ -43,6 +43,7 @@ final class TableViewHandler {
         guard childHandlers.isEmpty else { return }
 
         childHandlers.append(BannerTableViewHandler())
+        childHandlers.append(CategoriesTableViewHandler())
     }
 }
 
