@@ -13,7 +13,11 @@ protocol CategoriesTableViewHandlerDelegate: AnyObject {
 }
 
 final class CategoriesTableViewHandler {
-    weak var delegate: TableViewHandlerActionDelegate?
+    weak var delegate: TableViewHandlerActionDelegate? {
+        didSet {
+            categoriesCollectionDelegateSource.delegate = delegate
+        }
+    }
     private weak var collectionDelegate: CategoriesTableViewHandlerDelegate?
     private let apiService: CategoriesApiProtocol
     private let section: Int
@@ -31,9 +35,9 @@ final class CategoriesTableViewHandler {
             case let .success(response):
                 let responseCategories: [CategoriesResponse] = response.data
                 let categories: [Category] = responseCategories.map {
-                    Category(description: $0.descricao, imageUrlString: $0.urlImagem, image: nil)
+                    Category(id: $0.id, description: $0.descricao, imageUrlString: $0.urlImagem, image: nil)
                 }
-                self?.categoriesCollectionDelegateSource.setCategories(categories)
+                self?.categoriesCollectionDelegateSource.setCategories(categories.sorted { $0.id < $1.id })
                 self?.delegate?.updateTableView(section: self?.section ?? 0)
             case let .failure(error):
                 print(error)

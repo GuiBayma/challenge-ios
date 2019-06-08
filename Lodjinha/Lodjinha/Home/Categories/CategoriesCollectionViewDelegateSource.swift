@@ -10,6 +10,7 @@ import UIKit
 
 final class CategoriesCollectionViewDelegateSource: NSObject {
 
+    weak var delegate: TableViewHandlerActionDelegate?
     weak var cellDelegate: CategoriesCollectionViewCellDelegate?
     private var categories: [Category] = []
 
@@ -33,6 +34,11 @@ extension CategoriesCollectionViewDelegateSource: UICollectionViewDelegateFlowLa
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 140)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category: Category = categories[indexPath.row]
+        delegate?.didSelectCollectionItem(category: category)
     }
 }
 

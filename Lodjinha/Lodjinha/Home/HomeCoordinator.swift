@@ -32,6 +32,16 @@ extension HomeCoordinator: Coordinator {
 
     func start() {
         let homeController = HomeViewController()
+        homeController.navigationDelegate = self
         navigationController.pushViewController(homeController, animated: false)
+    }
+}
+
+// MARK: - HomeViewControllerNavigationDelegate
+
+extension HomeCoordinator: HomeViewControllerNavigationDelegate {
+    func homeViewController(_ controller: HomeViewController, didSelect category: Category) {
+        let productsListController: ProductsListViewController = ProductsListViewController(category: category)
+        navigationController.pushViewController(productsListController, animated: true)
     }
 }

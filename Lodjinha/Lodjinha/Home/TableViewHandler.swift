@@ -27,6 +27,7 @@ extension TableViewHandlerDelegate {
 protocol TableViewHandlerActionDelegate: AnyObject {
     func updateTableView(section: Int)
     func updateTableView(section: Int, row: Int)
+    func didSelectCollectionItem(category: Category)
 }
 
 final class TableViewHandler {

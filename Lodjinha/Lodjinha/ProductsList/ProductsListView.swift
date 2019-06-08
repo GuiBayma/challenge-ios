@@ -1,29 +1,23 @@
 //
-//  HomeView.swift
+//  ProductsListView.swift
 //  Lodjinha
 //
-//  Created by Guilherme Bayma on 05/06/19.
+//  Created by Guilherme Bayma on 07/06/19.
 //  Copyright © 2019 Guilherme Bayma. All rights reserved.
 //
 
 import UIKit
 
-typealias TableViewDelegateDataSource = UITableViewDelegate & UITableViewDataSource
-
-final class HomeView: UIView {
+final class ProductsListView: UIView {
 
     private lazy var tableView: UITableView = {
         let table: UITableView = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 100
-        table.estimatedSectionHeaderHeight = 40
-        table.sectionHeaderHeight = UITableView.automaticDimension
         table.tableFooterView = UIView()
         table.separatorStyle = .none
 
-        table.register(cellType: BannerTableViewCell.self)
-        table.register(cellType: CategoriesTableViewCell.self)
         table.register(cellType: BestSellersShimmeringTableViewCell.self)
         table.register(cellType: BestSellerTableViewCell.self)
 
@@ -42,24 +36,11 @@ final class HomeView: UIView {
         setupView()
     }
 
-    // MARK: - TableView updates
-
-    func reloadTableViewSections(at sections: IndexSet) {
-        tableView.beginUpdates()
-        tableView.reloadSections(sections, with: .fade)
-        tableView.endUpdates()
-    }
-
-    func reloadTableViewRows(at indexes: [IndexPath]) {
-        tableView.beginUpdates()
-        tableView.reloadRows(at: indexes, with: .fade)
-        tableView.endUpdates()
-    }
 }
 
 // MARK: - ViewConfiguration
 
-extension HomeView: ViewConfiguration {
+extension ProductsListView: ViewConfiguration {
     func setupViewHierarchy() {
         addSubview(tableView)
     }

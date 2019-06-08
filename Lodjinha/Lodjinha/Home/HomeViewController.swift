@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol HomeViewControllerNavigationDelegate: AnyObject {
+    func homeViewController(_ controller: HomeViewController, didSelect category: Category)
+}
+
 final class HomeViewController: UIViewController {
 
+    weak var navigationDelegate: HomeViewControllerNavigationDelegate?
     private lazy var homeView: HomeView = HomeView(delegateSource: self)
     private let tableViewHandler: TableViewHandlerDelegate
 
@@ -79,5 +84,9 @@ extension HomeViewController: TableViewHandlerActionDelegate {
 
     func updateTableView(section: Int, row: Int) {
         homeView.reloadTableViewRows(at: [IndexPath(row: row, section: section)])
+    }
+
+    func didSelectCollectionItem(category: Category) {
+        navigationDelegate?.homeViewController(self, didSelect: category)
     }
 }

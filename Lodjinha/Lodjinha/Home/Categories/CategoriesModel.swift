@@ -20,6 +20,7 @@ struct CategoriesResponse: Decodable {
 }
 
 struct Category {
+    var id: Int
     var description: String
     var imageUrlString: String
     var image: UIImage?
