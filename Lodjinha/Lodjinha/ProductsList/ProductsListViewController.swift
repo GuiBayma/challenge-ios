@@ -79,7 +79,8 @@ final class ProductsListViewController: UIViewController {
                 self?.offset = response.offset + response.data.count
                 self?.total = response.total
                 let products: [Product] = response.data.map {
-                    Product(name: $0.nome,
+                    Product(id: $0.id,
+                            name: $0.nome,
                             imageUrlString: $0.urlImagem,
                             description: $0.descricao,
                             image: nil,

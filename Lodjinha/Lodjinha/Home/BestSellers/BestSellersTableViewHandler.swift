@@ -25,7 +25,8 @@ final class BestSellersTableViewHandler {
             switch result {
             case let .success(response):
                 self?.bestSellers = response.data.map {
-                    Product(name: $0.nome,
+                    Product(id: $0.id,
+                            name: $0.nome,
                             imageUrlString: $0.urlImagem,
                             description: $0.descricao,
                             image: nil,

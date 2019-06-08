@@ -29,3 +29,7 @@
 // Product detail
 "CATEGORY_TITLE_LABEL" = "Category: %@";
 "RESERVE_BUTTON_TITLE" = "Reserve";
+"RESERVE_ALERT_TITLE" = "Reserve";
+"RESERVE_ALERT_SUCCESS_MESSAGE" = "The reservation of the product %@ was made successfully!";
+"RESERVE_ALERT_FAILURE_MESSAGE" = "There was a problem reserving your product. Please try again later.";
+"RESERVE_ALERT_BUTTON" = "Ok";

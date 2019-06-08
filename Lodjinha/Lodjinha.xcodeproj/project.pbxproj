@@ -74,6 +74,8 @@
 		17BDA4DE22AC3AD50044792D /* ProductHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4DD22AC3AD50044792D /* ProductHeaderView.swift */; };
 		17BDA4E022AC3B860044792D /* ProductPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4DF22AC3B860044792D /* ProductPriceView.swift */; };
 		17BDA4E222AC3C770044792D /* ProductDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E122AC3C770044792D /* ProductDescriptionView.swift */; };
+		17BDA4E422AC5FBE0044792D /* ProductDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E322AC5FBE0044792D /* ProductDetailAPI.swift */; };
+		17BDA4E622AC60540044792D /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E522AC60540044792D /* ProductDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,8 @@
 		17BDA4DD22AC3AD50044792D /* ProductHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHeaderView.swift; sourceTree = "<group>"; };
 		17BDA4DF22AC3B860044792D /* ProductPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPriceView.swift; sourceTree = "<group>"; };
 		17BDA4E122AC3C770044792D /* ProductDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionView.swift; sourceTree = "<group>"; };
+		17BDA4E322AC5FBE0044792D /* ProductDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAPI.swift; sourceTree = "<group>"; };
+		17BDA4E522AC60540044792D /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +421,8 @@
 				17BDA4DD22AC3AD50044792D /* ProductHeaderView.swift */,
 				17BDA4DF22AC3B860044792D /* ProductPriceView.swift */,
 				17BDA4E122AC3C770044792D /* ProductDescriptionView.swift */,
+				17BDA4E322AC5FBE0044792D /* ProductDetailAPI.swift */,
+				17BDA4E522AC60540044792D /* ProductDetailModel.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -650,9 +656,11 @@
 				17A940F822A56835004B9054 /* AppDelegate.swift in Sources */,
 				17BDA47422A8BE5E0044792D /* BannerModel.swift in Sources */,
 				17BDA4D622AC21660044792D /* ProductDetailView.swift in Sources */,
+				17BDA4E422AC5FBE0044792D /* ProductDetailAPI.swift in Sources */,
 				17BDA4C922AB57090044792D /* ProductsListViewController.swift in Sources */,
 				17BDA4CB22AB57470044792D /* ProductsListView.swift in Sources */,
 				17BDA4B422AAEC3F0044792D /* UIImageView+Size.swift in Sources */,
+				17BDA4E622AC60540044792D /* ProductDetailModel.swift in Sources */,
 				17BDA4CD22AB59E40044792D /* ProductsListTableViewDelegateSource.swift in Sources */,
 				17BDA4BE22AB07D30044792D /* BestSellersSectionHeaderView.swift in Sources */,
 				17BDA4A822AAAD950044792D /* CategoriesTableViewHandler.swift in Sources */,

@@ -56,6 +56,7 @@ extension HomeCoordinator: HomeViewControllerNavigationDelegate {
     func homeViewController(_ controller: HomeViewController, didSelect product: Product) {
         setupBackButton(controller, title: L10n.backNavigationButton)
         let productDetailController: ProductDetailViewController = ProductDetailViewController(product: product)
+        productDetailController.navigationDelegate = self
         navigationController.pushViewController(productDetailController, animated: true)
     }
 }
@@ -66,6 +67,15 @@ extension HomeCoordinator: ProductsListControllerNavigationDelegate {
     func productsListController(_ controller: ProductsListViewController, didSelect product: Product) {
         setupBackButton(controller, title: L10n.backNavigationButton)
         let productDetailController: ProductDetailViewController = ProductDetailViewController(product: product)
+        productDetailController.navigationDelegate = self
         navigationController.pushViewController(productDetailController, animated: true)
+    }
+}
+
+// MARK: - ProductDetailControllerNavigationDelegate
+
+extension HomeCoordinator: ProductDetailControllerNavigationDelegate {
+    func didPressAlertAction(_ controller: ProductDetailViewController) {
+        navigationController.popViewController(animated: true)
     }
 }

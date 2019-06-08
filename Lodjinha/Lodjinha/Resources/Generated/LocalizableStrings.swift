@@ -39,6 +39,16 @@ internal enum L10n {
   internal static func oldPriceLabel(_ p1: String) -> String {
     return L10n.tr("Localizable", "OLD_PRICE_LABEL", p1)
   }
+  /// Ok
+  internal static let reserveAlertButton = L10n.tr("Localizable", "RESERVE_ALERT_BUTTON")
+  /// There was a problem reserving your product. Please try again later.
+  internal static let reserveAlertFailureMessage = L10n.tr("Localizable", "RESERVE_ALERT_FAILURE_MESSAGE")
+  /// The reservation of the product %@ was made successfully!
+  internal static func reserveAlertSuccessMessage(_ p1: String) -> String {
+    return L10n.tr("Localizable", "RESERVE_ALERT_SUCCESS_MESSAGE", p1)
+  }
+  /// Reserve
+  internal static let reserveAlertTitle = L10n.tr("Localizable", "RESERVE_ALERT_TITLE")
   /// Reserve
   internal static let reserveButtonTitle = L10n.tr("Localizable", "RESERVE_BUTTON_TITLE")
 }

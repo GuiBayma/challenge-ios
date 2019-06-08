@@ -8,7 +8,21 @@
 
 import UIKit
 
+protocol ProductDetailViewDelegate: AnyObject {
+    func reserveButtonPressed()
+}
+
 final class ProductDetailView: UIView {
+
+    weak var delegate: ProductDetailViewDelegate?
+
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.style = .gray
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
 
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -44,6 +58,7 @@ final class ProductDetailView: UIView {
         button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = UIColor.Purple
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return button
     }()
 
@@ -66,6 +81,24 @@ final class ProductDetailView: UIView {
         productPriceView.setCurrentPrice(product.currentPrice)
         productDescriptionView.setCategory(product.categoryName)
         productDescriptionView.setDescription(product.description)
+    }
+
+    // MARK: - Button action
+
+    @objc
+    private func buttonPressed() {
+        delegate?.reserveButtonPressed()
+    }
+
+    // MARK: - Loading state
+
+    func setButtonToLoadingState() {
+        button.isEnabled = false
+        button.alpha = 0.5
+        addSubview(activityIndicator)
+        bringSubviewToFront(activityIndicator)
+        activityIndicator.anchorTo(view: button)
+        activityIndicator.startAnimating()
     }
 }
 
