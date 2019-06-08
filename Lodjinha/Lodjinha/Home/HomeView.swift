@@ -49,6 +49,12 @@ final class HomeView: UIView {
         tableView.reloadSections(sections, with: .fade)
         tableView.endUpdates()
     }
+
+    func reloadTableViewRows(at indexes: [IndexPath]) {
+        tableView.beginUpdates()
+        tableView.reloadRows(at: indexes, with: .fade)
+        tableView.endUpdates()
+    }
 }
 
 // MARK: - ViewConfiguration

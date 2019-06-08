@@ -6,7 +6,7 @@
 //  Copyright © 2019 Guilherme Bayma. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct BestSellersData: Decodable {
     var data: [BestSellersResponse]
@@ -18,7 +18,15 @@ struct BestSellersResponse: Decodable {
     var nome: String
     var urlImagem: String
     var descricao: String
-    var precoDe: Decimal
-    var precoPor: Decimal
+    var precoDe: Float
+    var precoPor: Float
     var categoria: CategoriesResponse
+}
+
+struct BestSeller {
+    var name: String
+    var imageUrlString: String
+    var image: UIImage?
+    var oldPrice: Float
+    var currentPrice: Float
 }

@@ -58,7 +58,7 @@ extension CategoriesTableViewHandler: TableViewHandlerDelegate {
 extension CategoriesTableViewHandler: CategoriesCollectionViewCellDelegate {
     func categoriesCollectionViewCell(_ cell: CategoriesCollectionViewCell, getImage urlString: String) {
         apiService.getCategoryImage(imageUrl: urlString) { [weak self] result in
-            var image: UIImage = Asset.categoryPlaceholderImage.image
+            var image: UIImage = Asset.placeholderImage.image
             switch result {
             case let .success(response):
                 image = response

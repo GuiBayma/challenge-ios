@@ -58,10 +58,10 @@ extension BestSellersSectionHeaderView: ViewConfiguration {
             .leadingAnchor(equalTo: leadingAnchor, constant: margin)
             .topAnchor(equalTo: separator.bottomAnchor, constant: margin)
             .trailingAnchor(equalTo: trailingAnchor)
-            .bottomAnchor(equalTo: bottomAnchor)
+            .bottomAnchor(equalTo: bottomAnchor, constant: -margin)
     }
 
     func configureViews() {
-        backgroundColor = .clear
+        backgroundColor = UIColor.White
     }
 }

@@ -76,4 +76,8 @@ extension HomeViewController: TableViewHandlerActionDelegate {
     func updateTableView(section: Int) {
         homeView.reloadTableViewSections(at: [section])
     }
+
+    func updateTableView(section: Int, row: Int) {
+        homeView.reloadTableViewRows(at: [IndexPath(row: row, section: section)])
+    }
 }
