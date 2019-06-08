@@ -36,6 +36,17 @@ final class ProductsListView: UIView {
         setupView()
     }
 
+    // MARK: - TableView updates
+
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+
+    func reloadTableViewRows(at indexes: [IndexPath]) {
+        tableView.beginUpdates()
+        tableView.reloadRows(at: indexes, with: .fade)
+        tableView.endUpdates()
+    }
 }
 
 // MARK: - ViewConfiguration

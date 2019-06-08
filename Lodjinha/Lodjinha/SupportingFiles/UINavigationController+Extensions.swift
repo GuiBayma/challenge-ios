@@ -23,6 +23,7 @@ extension UINavigationController {
     /// - Parameter title: String a ser usada como título
     func configureNavigationBar(with title: String) {
         setupBarTitle(title)
+        setupBarTintColor()
         setupBarBackground()
         setupBarShadow()
     }
@@ -32,6 +33,7 @@ extension UINavigationController {
     /// - Parameter image: UIImage a ser usada como título
     func configureNavigationBar(with image: UIImage) {
         setupBarTitleView(image)
+        setupBarTintColor()
         setupBarBackground()
         setupBarShadow()
     }
@@ -47,6 +49,10 @@ extension UINavigationController {
         imageView.frame = CGRect(x: 0, y: 0, width: 127.84, height: 34)
         imageView.contentMode = .scaleAspectFit
         visibleViewController?.navigationItem.titleView = imageView
+    }
+
+    private func setupBarTintColor() {
+        navigationBar.tintColor = UIColor.White
     }
 
     private func setupBarBackground() {

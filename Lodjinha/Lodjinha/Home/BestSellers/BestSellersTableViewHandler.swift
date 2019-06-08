@@ -27,7 +27,8 @@ final class BestSellersTableViewHandler {
                 self?.bestSellers = response.data.map {
                     BestSeller(name: $0.nome,
                                imageUrlString: $0.urlImagem,
-                               image: nil, oldPrice: $0.precoDe,
+                               image: nil,
+                               oldPrice: $0.precoDe,
                                currentPrice: $0.precoPor)
                 }
                 self?.delegate?.updateTableView(section: self?.section ?? 0)

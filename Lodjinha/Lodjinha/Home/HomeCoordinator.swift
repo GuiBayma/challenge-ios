@@ -21,6 +21,12 @@ final class HomeCoordinator {
                                                        image: Asset.homeDeselected.image,
                                                        selectedImage: Asset.homeActive.image)
     }
+
+    private func setupHomeBackButton(_ controller: UIViewController) {
+        let backItem: UIBarButtonItem = UIBarButtonItem()
+        backItem.title = L10n.homeTab
+        controller.navigationItem.backBarButtonItem = backItem
+    }
 }
 
 // MARK: - Coordinator
@@ -41,6 +47,7 @@ extension HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewControllerNavigationDelegate {
     func homeViewController(_ controller: HomeViewController, didSelect category: Category) {
+        setupHomeBackButton(controller)
         let productsListController: ProductsListViewController = ProductsListViewController(category: category)
         navigationController.pushViewController(productsListController, animated: true)
     }

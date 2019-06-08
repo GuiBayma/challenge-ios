@@ -67,6 +67,8 @@
 		17BDA4C922AB57090044792D /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4C822AB57090044792D /* ProductsListViewController.swift */; };
 		17BDA4CB22AB57470044792D /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4CA22AB57470044792D /* ProductsListView.swift */; };
 		17BDA4CD22AB59E40044792D /* ProductsListTableViewDelegateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4CC22AB59E40044792D /* ProductsListTableViewDelegateSource.swift */; };
+		17BDA4CF22AC01820044792D /* ProductsListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4CE22AC01820044792D /* ProductsListAPI.swift */; };
+		17BDA4D122AC022E0044792D /* ProductsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4D022AC022E0044792D /* ProductsListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,8 @@
 		17BDA4C822AB57090044792D /* ProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
 		17BDA4CA22AB57470044792D /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
 		17BDA4CC22AB59E40044792D /* ProductsListTableViewDelegateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListTableViewDelegateSource.swift; sourceTree = "<group>"; };
+		17BDA4CE22AC01820044792D /* ProductsListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListAPI.swift; sourceTree = "<group>"; };
+		17BDA4D022AC022E0044792D /* ProductsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +392,8 @@
 				17BDA4C822AB57090044792D /* ProductsListViewController.swift */,
 				17BDA4CA22AB57470044792D /* ProductsListView.swift */,
 				17BDA4CC22AB59E40044792D /* ProductsListTableViewDelegateSource.swift */,
+				17BDA4CE22AC01820044792D /* ProductsListAPI.swift */,
+				17BDA4D022AC022E0044792D /* ProductsListModel.swift */,
 			);
 			path = ProductsList;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				17BDA45822A856B70044792D /* HomeView.swift in Sources */,
 				17BDA4AE22AAAF7E0044792D /* CategoriesAPI.swift in Sources */,
 				17BDA47222A8BD7D0044792D /* BannerAPI.swift in Sources */,
+				17BDA4CF22AC01820044792D /* ProductsListAPI.swift in Sources */,
 				17BDA41B22A6CE660044792D /* AboutView.swift in Sources */,
 				17BDA4C222AB0C2B0044792D /* BestSellersModel.swift in Sources */,
 				17BDA47722A981010044792D /* EndPoint.swift in Sources */,
@@ -604,6 +611,7 @@
 				17BDA4C422AB124F0044792D /* BestSellersShimmeringTableViewCell.swift in Sources */,
 				17BDA45122A84E100044792D /* HomeCoordinator.swift in Sources */,
 				17BDA47F22A98D110044792D /* Router.swift in Sources */,
+				17BDA4D122AC022E0044792D /* ProductsListModel.swift in Sources */,
 				17BDA46322A87CF10044792D /* TableViewHandler.swift in Sources */,
 				17BDA48322A9B75C0044792D /* BannerCollectionViewDelegateSource.swift in Sources */,
 				17BDA48122A9B57F0044792D /* BannerCollectionViewCell.swift in Sources */,
