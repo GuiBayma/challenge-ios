@@ -69,10 +69,10 @@ final class BestSellerTableViewCell: UITableViewCell, Reusable {
 
     // MARK: - Setters
 
-    func setBestSeller(_ bestSeller: BestSeller) {
+    func setBestSeller(_ bestSeller: Product) {
         descriptionLabel.text = "\(bestSeller.name)"
         setOldPrice(bestSeller.oldPrice)
-        currentPriceLabel.text = String(format: "Por: %.2f", bestSeller.currentPrice)
+        currentPriceLabel.text = L10n.currentPriceLabel(String(format: "%.2f", bestSeller.currentPrice))
         if let image = bestSeller.image {
             productImage.setImage(image, targetSize: CGSize(width: 90, height: 90))
         } else {
@@ -82,7 +82,7 @@ final class BestSellerTableViewCell: UITableViewCell, Reusable {
     }
 
     private func setOldPrice(_ price: Float) {
-        let formattedString: String = String(format: "De: %.2f", price)
+        let formattedString: String = L10n.oldPriceLabel(String(format: "%.2f", price))
         let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: formattedString)
         attributeString.addAttribute(.strikethroughStyle,
                                      value: 2,

@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeViewControllerNavigationDelegate: AnyObject {
     func homeViewController(_ controller: HomeViewController, didSelect category: Category)
+    func homeViewController(_ controller: HomeViewController, didSelect product: Product)
 }
 
 final class HomeViewController: UIViewController {
@@ -49,7 +50,13 @@ final class HomeViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension HomeViewController: UITableViewDelegate {}
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let product: Product = tableViewHandler.tableView(tableView, didSelectRowAt: indexPath) {
+            navigationDelegate?.homeViewController(self, didSelect: product)
+        }
+    }
+}
 
 // MARK: - UITableViewDataSource
 

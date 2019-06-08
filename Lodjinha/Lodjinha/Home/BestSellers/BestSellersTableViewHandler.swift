@@ -12,7 +12,7 @@ final class BestSellersTableViewHandler {
     weak var delegate: TableViewHandlerActionDelegate?
     private let apiService: BestSellersApiProtocol
     private let section: Int
-    private var bestSellers: [BestSeller] = []
+    private var bestSellers: [Product] = []
 
     init(section: Int, apiService: BestSellersApiProtocol = BestSellersAPI()) {
         self.section = section
@@ -25,11 +25,13 @@ final class BestSellersTableViewHandler {
             switch result {
             case let .success(response):
                 self?.bestSellers = response.data.map {
-                    BestSeller(name: $0.nome,
-                               imageUrlString: $0.urlImagem,
-                               image: nil,
-                               oldPrice: $0.precoDe,
-                               currentPrice: $0.precoPor)
+                    Product(name: $0.nome,
+                            imageUrlString: $0.urlImagem,
+                            description: $0.descricao,
+                            image: nil,
+                            oldPrice: $0.precoDe,
+                            currentPrice: $0.precoPor,
+                            categoryName: $0.categoria.descricao)
                 }
                 self?.delegate?.updateTableView(section: self?.section ?? 0)
             case .failure:
@@ -66,11 +68,15 @@ extension BestSellersTableViewHandler: TableViewHandlerDelegate {
             cell.delegate = self
             cell.index = indexPath.row
             if bestSellers.indices.contains(indexPath.row) {
-                let bestSeller: BestSeller = bestSellers[indexPath.item]
+                let bestSeller: Product = bestSellers[indexPath.row]
                 cell.setBestSeller(bestSeller)
             }
             return cell
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Product? {
+        return bestSellers[indexPath.row]
     }
 }
 

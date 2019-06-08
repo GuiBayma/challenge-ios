@@ -11,25 +11,26 @@ import UIKit
 protocol ProductsListDelegateSourceProtocol: TableViewDelegateDataSource {
     var delegate: ProductsListDelegateSourceDelegate? { get set }
     var cellDelegate: BestSellerTableViewCellDelegate? { get set }
-    func updateProducts(_ newProducts: [BestSeller])
+    func updateProducts(_ newProducts: [Product])
     func updateProduct(with image: UIImage, at index: Int)
 }
 
 protocol ProductsListDelegateSourceDelegate: AnyObject {
     func shouldLoadMoreProducts()
+    func didSelectProduct(product: Product)
 }
 
 final class ProductsListTableViewDelegateSource: NSObject {
     weak var delegate: ProductsListDelegateSourceDelegate?
     weak var cellDelegate: BestSellerTableViewCellDelegate?
-    private var products: [BestSeller] = []
+    private var products: [Product] = []
     private let loadBefore: Int = 10
 }
 
 // MARK: - ProductsListDelegateSource
 
 extension ProductsListTableViewDelegateSource: ProductsListDelegateSourceProtocol {
-    func updateProducts(_ newProducts: [BestSeller]) {
+    func updateProducts(_ newProducts: [Product]) {
         products.append(contentsOf: newProducts)
     }
 
@@ -45,6 +46,11 @@ extension ProductsListTableViewDelegateSource: UITableViewDelegate {
         if indexPath.row > products.count - loadBefore {
             delegate?.shouldLoadMoreProducts()
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product: Product = products[indexPath.row]
+        delegate?.didSelectProduct(product: product)
     }
 }
 
@@ -67,7 +73,7 @@ extension ProductsListTableViewDelegateSource: UITableViewDataSource {
             cell.index = indexPath.row
             cell.delegate = cellDelegate
             if products.indices.contains(indexPath.row) {
-                let product: BestSeller = products[indexPath.item]
+                let product: Product = products[indexPath.item]
                 cell.setBestSeller(product)
             }
             return cell

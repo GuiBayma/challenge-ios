@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol ProductsListControllerNavigationDelegate: AnyObject {
+    func productsListController(_ controller: ProductsListViewController, didSelect product: Product)
+}
+
 final class ProductsListViewController: UIViewController {
 
+    weak var navigationDelegate: ProductsListControllerNavigationDelegate?
     private let category: Category
     private let delegateSource: ProductsListDelegateSourceProtocol
     private let apiService: ProductsListApiProtocol
@@ -73,12 +78,14 @@ final class ProductsListViewController: UIViewController {
             case let .success(response):
                 self?.offset = response.offset + response.data.count
                 self?.total = response.total
-                let products: [BestSeller] = response.data.map {
-                    BestSeller(name: $0.nome,
-                               imageUrlString: $0.urlImagem,
-                               image: nil,
-                               oldPrice: $0.precoDe,
-                               currentPrice: $0.precoPor)
+                let products: [Product] = response.data.map {
+                    Product(name: $0.nome,
+                            imageUrlString: $0.urlImagem,
+                            description: $0.descricao,
+                            image: nil,
+                            oldPrice: $0.precoDe,
+                            currentPrice: $0.precoPor,
+                            categoryName: $0.categoria.descricao)
                 }
                 self?.delegateSource.updateProducts(products)
                 self?.productsListView.reloadTableView()
@@ -106,6 +113,8 @@ extension ProductsListViewController: BestSellerTableViewCellDelegate {
             self?.productsListView.reloadTableViewRows(at: [IndexPath(row: cell.index, section: 0)])
         }
     }
+
+    func didTapCell(_ cell: BestSellerTableViewCell) {}
 }
 
 // MARK: - ProductsListDelegateSourceDelegate
@@ -121,5 +130,9 @@ extension ProductsListViewController: ProductsListDelegateSourceDelegate {
             limit = newLimit
         }
         getProductsList()
+    }
+
+    func didSelectProduct(product: Product) {
+        navigationDelegate?.productsListController(self, didSelect: product)
     }
 }

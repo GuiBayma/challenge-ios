@@ -22,9 +22,9 @@ final class HomeCoordinator {
                                                        selectedImage: Asset.homeActive.image)
     }
 
-    private func setupHomeBackButton(_ controller: UIViewController) {
+    private func setupBackButton(_ controller: UIViewController, title: String) {
         let backItem: UIBarButtonItem = UIBarButtonItem()
-        backItem.title = L10n.homeTab
+        backItem.title = title
         controller.navigationItem.backBarButtonItem = backItem
     }
 }
@@ -47,8 +47,25 @@ extension HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewControllerNavigationDelegate {
     func homeViewController(_ controller: HomeViewController, didSelect category: Category) {
-        setupHomeBackButton(controller)
+        setupBackButton(controller, title: L10n.homeTab)
         let productsListController: ProductsListViewController = ProductsListViewController(category: category)
+        productsListController.navigationDelegate = self
         navigationController.pushViewController(productsListController, animated: true)
+    }
+
+    func homeViewController(_ controller: HomeViewController, didSelect product: Product) {
+        setupBackButton(controller, title: L10n.backNavigationButton)
+        let productDetailController: ProductDetailViewController = ProductDetailViewController(product: product)
+        navigationController.pushViewController(productDetailController, animated: true)
+    }
+}
+
+// MARK: - ProductsListControllerNavigationDelegate
+
+extension HomeCoordinator: ProductsListControllerNavigationDelegate {
+    func productsListController(_ controller: ProductsListViewController, didSelect product: Product) {
+        setupBackButton(controller, title: L10n.backNavigationButton)
+        let productDetailController: ProductDetailViewController = ProductDetailViewController(product: product)
+        navigationController.pushViewController(productDetailController, animated: true)
     }
 }

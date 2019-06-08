@@ -22,11 +22,3 @@ struct BestSellersResponse: Decodable {
     var precoPor: Float
     var categoria: CategoriesResponse
 }
-
-struct BestSeller {
-    var name: String
-    var imageUrlString: String
-    var image: UIImage?
-    var oldPrice: Float
-    var currentPrice: Float
-}

@@ -15,6 +15,7 @@ protocol TableViewHandlerDelegate: AnyObject {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Product?
 }
 
 extension TableViewHandlerDelegate {
@@ -22,6 +23,7 @@ extension TableViewHandlerDelegate {
     func numberOfRowsInSection(_ section: Int) -> Int { return 1 }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { return nil }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 0 }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Product? { return nil }
 }
 
 protocol TableViewHandlerActionDelegate: AnyObject {
@@ -76,5 +78,9 @@ extension TableViewHandler: TableViewHandlerDelegate {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return childHandlers[section].tableView(tableView, heightForHeaderInSection: section)
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Product? {
+        return childHandlers[indexPath.section].tableView(tableView, didSelectRowAt: indexPath)
     }
 }

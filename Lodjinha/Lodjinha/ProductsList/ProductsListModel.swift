@@ -15,11 +15,11 @@ struct ProductsListData: Decodable {
 }
 
 struct Product {
-    // swiftlint:disable identifier_name
-    var id: Int
     var name: String
     var imageUrlString: String
+    var description: String
     var image: UIImage?
     var oldPrice: Float
     var currentPrice: Float
+    var categoryName: String
 }

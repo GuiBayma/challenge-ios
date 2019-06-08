@@ -10,11 +10,22 @@
 "HOME_TAB" = "Home";
 "ABOUT_TAB" = "Sobre";
 
+// Navigation Bar
+"BACK_NAVIGATION_BUTTON" = "Voltar";
+
 // About
 "BRAND_NAME" = "a Lodjinha";
 "DEVELOPER_NAME" = "Guilherme Bayma";
-"DEVELOPMENT_DATE" = "04 de junho de 2019";
+"DEVELOPMENT_DATE" = "08 de junho de 2019";
 
 // Home
 "CATEGORIES_SECTION_TITLE" = "Categorias";
 "BEST_SELLERS_SECTION_TITLE" = "Mais vendidos";
+
+// Price
+"OLD_PRICE_LABEL" = "De: %@";
+"CURRENT_PRICE_LABEL" = "Por %@";
+
+// Product detail
+"CATEGORY_TITLE_LABEL" = "Categoria: %@";
+"RESERVE_BUTTON_TITLE" = "Reservar";
