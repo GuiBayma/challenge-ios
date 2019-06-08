@@ -45,6 +45,20 @@ class HomeCoordinatorSpec: QuickSpec {
                     expect(rootController.tabBarItem.image) == Asset.homeDeselected.image
                 }
             }
+
+            context("Navigation Delegate") {
+                it("should conform to HomeViewControllerNavigationDelegate") {
+                    expect(sut).to(beAKindOf(HomeViewControllerNavigationDelegate.self))
+                }
+
+                it("should conform to ProductsListControllerNavigationDelegate") {
+                    expect(sut).to(beAKindOf(ProductsListControllerNavigationDelegate.self))
+                }
+
+                it("should conform to ProductDetailControllerNavigationDelegate") {
+                    expect(sut).to(beAKindOf(ProductDetailControllerNavigationDelegate.self))
+                }
+            }
         }
     }
 }

@@ -76,6 +76,8 @@
 		17BDA4E222AC3C770044792D /* ProductDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E122AC3C770044792D /* ProductDescriptionView.swift */; };
 		17BDA4E422AC5FBE0044792D /* ProductDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E322AC5FBE0044792D /* ProductDetailAPI.swift */; };
 		17BDA4E622AC60540044792D /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E522AC60540044792D /* ProductDetailModel.swift */; };
+		17BDA4E822AC77920044792D /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E722AC77920044792D /* HomeViewControllerSpec.swift */; };
+		17BDA4EA22AC80650044792D /* TableViewHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4E922AC80650044792D /* TableViewHandlerSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +177,8 @@
 		17BDA4E122AC3C770044792D /* ProductDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionView.swift; sourceTree = "<group>"; };
 		17BDA4E322AC5FBE0044792D /* ProductDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAPI.swift; sourceTree = "<group>"; };
 		17BDA4E522AC60540044792D /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
+		17BDA4E722AC77920044792D /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
+		17BDA4E922AC80650044792D /* TableViewHandlerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHandlerSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				17BDA45522A854350044792D /* HomeCoordinatorSpec.swift */,
+				17BDA4E722AC77920044792D /* HomeViewControllerSpec.swift */,
+				17BDA4E922AC80650044792D /* TableViewHandlerSpec.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -672,9 +678,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				17BDA45622A854350044792D /* HomeCoordinatorSpec.swift in Sources */,
+				17BDA4EA22AC80650044792D /* TableViewHandlerSpec.swift in Sources */,
 				17BDA45422A84FA90044792D /* AboutCoordinatorSpec.swift in Sources */,
 				17BDA44722A709A80044792D /* AppCoordinatorSpec.swift in Sources */,
 				17BDA44A22A711FE0044792D /* AboutViewControllerSpec.swift in Sources */,
+				17BDA4E822AC77920044792D /* HomeViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
