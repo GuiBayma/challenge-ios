@@ -169,12 +169,16 @@ extension Router: NetworkRouter {
             } else {
                 tasks[url] = [completion]
                 log(request)
-                _ = session.dataTask(with: request) { [unowned self] data, response, error in
+                _ = session.dataTask(with: request) { [weak self] data, response, error in
                     DispatchQueue.main.async {
-                        self.log(data: data, response: response, error: error)
-                        guard let completionHandlers = self.tasks[url] else { completion(.failure(.failed)); return }
+                        self?.log(data: data, response: response, error: error)
+                        guard let completionHandlers = self?.tasks[url] else { completion(.failure(.failed)); return }
                         completionHandlers.forEach { _ in
-                            completion(self.handleResponse(data: data, response: response, error: error))
+                            if let response = self?.handleResponse(data: data, response: response, error: error) {
+                                completion(response)
+                            } else {
+                                completion(.failure(NetworkError.failed))
+                            }
                         }
                     }
                 }.resume()

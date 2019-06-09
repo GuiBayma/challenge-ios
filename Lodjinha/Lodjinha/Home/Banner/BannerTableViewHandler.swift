@@ -16,11 +16,10 @@ final class BannerTableViewHandler {
     private let bannerCollectionDelegateSource: BannerCollectionViewDelegateSource
 
     init(section: Int,
-         apiService: BannerApiProtocol = BannerAPI(),
-         bannerCollectionDelegateSource: BannerCollectionViewDelegateSource = BannerCollectionViewDelegateSource()) {
+         apiService: BannerApiProtocol = BannerAPI()) {
         self.section = section
         self.apiService = apiService
-        self.bannerCollectionDelegateSource = bannerCollectionDelegateSource
+        self.bannerCollectionDelegateSource = BannerCollectionViewDelegateSource()
         fetchBanners()
     }
 
