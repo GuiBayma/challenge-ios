@@ -294,6 +294,7 @@
 			children = (
 				17BDA44622A709A80044792D /* AppCoordinatorSpec.swift */,
 				17BDA45222A84F8F0044792D /* Home */,
+				17BDA4F322AD38E20044792D /* ProductList */,
 				17BDA44822A711D30044792D /* About */,
 				17BDA42822A6F4190044792D /* Info.plist */,
 				17BDA44B22A7142C0044792D /* Snapshots */,
@@ -448,6 +449,13 @@
 				17BDA4F122AC8E4F0044792D /* BannerCollectionViewDelegateSourceSpec.swift */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		17BDA4F322AD38E20044792D /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -11,6 +11,32 @@ install_homebrew() {
     fi
 }
 
+install_rbenv() {
+    if [[ $(brew ls --versions rbenv) == "" ]]
+    then
+        echo "Instalando rbenv"
+        brew install rbenv
+        echo "rbenv Instalado";
+    else
+        echo "rbenv já Instalado";
+    fi
+}
+
+switch_ruby_version() {
+    echo "Alterando ruby para versão 2.4.0"
+    echo "eval \"\$(rbenv init -)\"" >> ~/.bash_profile
+    rbenv install 2.4.0
+    rbenv local 2.4.0
+    source ~/.bash_profile
+    echo "ruby alterado"
+}
+
+install_gemfile_dependencies() {
+    echo "Instalando Packages do Gemfile"
+    bundle install
+    echo "Packages do Gemfile Instaladas"
+}
+
 install_mint() {
     if [[ $(brew ls --versions mint) == "" ]]
     then
@@ -47,6 +73,9 @@ bootstrap_carthage() {
 }
 
 install_homebrew
+install_rbenv
+switch_ruby_version
+install_gemfile_dependencies
 install_mint
 install_swiftgen_dependencies
 bootstrap_mint
