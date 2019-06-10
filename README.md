@@ -49,3 +49,17 @@ $ bundle exec fastlane tests
 Os resultados da execução dos testes (se rodados pelo fastlane) estarão na pasta `slather_output`.
 
 Por convenção, os testes são rodados no simulador do iPhone SE.
+
+## TODO
+
+* Terminar testes unitários
+* Terminar testes funcionais (com os Coordinators)
+* Remover Mint (?)
+* Refatorar `Home` para uma única UICollectionView com diferentes sections
+* Networking
+ * Remover decoding das classes de API
+ * Usar diferentes threads
+ * Base URL de acordo com diferentes schemes e configurations
+* Tokens de cores usando .xcassets (Light/Dark appearances)
+* Imagens para formato PDF
+* Componentizar elementos de UI
