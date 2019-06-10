@@ -70,7 +70,7 @@ class BannerTableViewHandlerSpec: QuickSpec {
             }
 
             context("TableViewHandlerActionDelegate") {
-                it("should call delegate after loading banners") {
+                xit("should call delegate after loading banners") {
                     expect(actionDelegateMock.section).toEventually(equal(0))
                 }
             }

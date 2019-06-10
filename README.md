@@ -40,6 +40,12 @@ Ou rode o script de bootstrap novamente.
 
 ## Testes
 
-Para rodar os testes, com o Xcode aberto, pressione `Command`+`U`.
+Para rodar os testes, com o Xcode aberto, pressione `Command`+`U`, ou rode a lane de testes do fastlane:
+
+```console
+$ bundle exec fastlane tests
+```
+
+Os resultados da execução dos testes (se rodados pelo fastlane) estarão na pasta `slather_output`.
 
 Por convenção, os testes são rodados no simulador do iPhone SE.
