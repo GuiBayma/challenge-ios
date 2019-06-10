@@ -7,3 +7,4 @@ github "AliSoftware/Reusable" ~> 4.0
 github "Quick/Nimble" ~> 8.0
 github "Quick/Quick" ~> 2.0
 github "ashfurrow/Nimble-Snapshots" ~> 7.0
+github "kif-framework/KIF" ~> 3.7

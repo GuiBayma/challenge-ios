@@ -81,10 +81,24 @@
 		17BDA4ED22AC83AA0044792D /* BannerTableViewHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4EC22AC83AA0044792D /* BannerTableViewHandlerSpec.swift */; };
 		17BDA4F022AC89F40044792D /* Banner_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA4EF22AC89F40044792D /* Banner_test.png */; };
 		17BDA4F222AC8E4F0044792D /* BannerCollectionViewDelegateSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA4F122AC8E4F0044792D /* BannerCollectionViewDelegateSourceSpec.swift */; };
+		17F2BCAE22ADFB2B0099F36D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; };
+		17F2BCAF22ADFB2B0099F36D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BDA43522A704DA0044792D /* Quick.framework */; };
+		17F2BCB122ADFB2B0099F36D /* KIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F2BCB022ADFB2B0099F36D /* KIF.framework */; };
+		17F2BCB322ADFB460099F36D /* KIF.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17F2BCB022ADFB2B0099F36D /* KIF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17F2BCB422ADFB460099F36D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43422A704DA0044792D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17F2BCB522ADFB460099F36D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BDA43522A704DA0044792D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17F2BCB822ADFB770099F36D /* QuickSpec+KIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F2BCB722ADFB770099F36D /* QuickSpec+KIF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		17BDA42922A6F4190044792D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A940EC22A56834004B9054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A940F322A56835004B9054;
+			remoteInfo = Lodjinha;
+		};
+		17F2BCA822ADFA1C0099F36D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17A940EC22A56834004B9054 /* Project object */;
 			proxyType = 1;
@@ -104,6 +118,18 @@
 				17BDA43C22A705150044792D /* Nimble_Snapshots.framework in CopyFiles */,
 				17BDA43D22A705150044792D /* Nimble.framework in CopyFiles */,
 				17BDA43E22A705150044792D /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17F2BCB222ADFB350099F36D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17F2BCB322ADFB460099F36D /* KIF.framework in CopyFiles */,
+				17F2BCB422ADFB460099F36D /* Nimble.framework in CopyFiles */,
+				17F2BCB522ADFB460099F36D /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +211,11 @@
 		17BDA4EC22AC83AA0044792D /* BannerTableViewHandlerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewHandlerSpec.swift; sourceTree = "<group>"; };
 		17BDA4EF22AC89F40044792D /* Banner_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Banner_test.png; sourceTree = "<group>"; };
 		17BDA4F122AC8E4F0044792D /* BannerCollectionViewDelegateSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewDelegateSourceSpec.swift; sourceTree = "<group>"; };
+		17F2BCA322ADFA1B0099F36D /* LodjinhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F2BCA722ADFA1C0099F36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17F2BCB022ADFB2B0099F36D /* KIF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KIF.framework; path = Carthage/Build/iOS/KIF.framework; sourceTree = "<group>"; };
+		17F2BCB622ADFB760099F36D /* LodjinhaUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LodjinhaUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		17F2BCB722ADFB770099F36D /* QuickSpec+KIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+KIF.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +238,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17F2BCA022ADFA1B0099F36D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F2BCB122ADFB2B0099F36D /* KIF.framework in Frameworks */,
+				17F2BCAE22ADFB2B0099F36D /* Nimble.framework in Frameworks */,
+				17F2BCAF22ADFB2B0099F36D /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -215,6 +256,7 @@
 			children = (
 				17A940F622A56835004B9054 /* Lodjinha */,
 				17BDA42522A6F4190044792D /* LodjinhaTests */,
+				17F2BCA422ADFA1C0099F36D /* LodjinhaUITests */,
 				17A940F522A56835004B9054 /* Products */,
 				17BDA43122A704DA0044792D /* Frameworks */,
 			);
@@ -225,6 +267,7 @@
 			children = (
 				17A940F422A56835004B9054 /* Lodjinha.app */,
 				17BDA42422A6F4180044792D /* LodjinhaTests.xctest */,
+				17F2BCA322ADFA1B0099F36D /* LodjinhaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,6 +348,7 @@
 		17BDA43122A704DA0044792D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17F2BCB022ADFB2B0099F36D /* KIF.framework */,
 				17BDA46C22A8A21D0044792D /* Reusable.framework */,
 				17BDA43222A704DA0044792D /* FBSnapshotTestCase.framework */,
 				17BDA43322A704DA0044792D /* Nimble_Snapshots.framework */,
@@ -458,6 +502,16 @@
 			path = ProductList;
 			sourceTree = "<group>";
 		};
+		17F2BCA422ADFA1C0099F36D /* LodjinhaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17F2BCA722ADFA1C0099F36D /* Info.plist */,
+				17F2BCB722ADFB770099F36D /* QuickSpec+KIF.swift */,
+				17F2BCB622ADFB760099F36D /* LodjinhaUITests-Bridging-Header.h */,
+			);
+			path = LodjinhaUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,6 +555,25 @@
 			productReference = 17BDA42422A6F4180044792D /* LodjinhaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		17F2BCA222ADFA1B0099F36D /* LodjinhaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17F2BCAD22ADFA1C0099F36D /* Build configuration list for PBXNativeTarget "LodjinhaUITests" */;
+			buildPhases = (
+				17F2BC9F22ADFA1B0099F36D /* Sources */,
+				17F2BCA022ADFA1B0099F36D /* Frameworks */,
+				17F2BCA122ADFA1B0099F36D /* Resources */,
+				17F2BCB222ADFB350099F36D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17F2BCA922ADFA1C0099F36D /* PBXTargetDependency */,
+			);
+			name = LodjinhaUITests;
+			productName = LodjinhaUITests;
+			productReference = 17F2BCA322ADFA1B0099F36D /* LodjinhaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -516,6 +589,11 @@
 					};
 					17BDA42322A6F4180044792D = {
 						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 17A940F322A56835004B9054;
+					};
+					17F2BCA222ADFA1B0099F36D = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 17A940F322A56835004B9054;
 					};
 				};
@@ -536,6 +614,7 @@
 			targets = (
 				17A940F322A56835004B9054 /* Lodjinha */,
 				17BDA42322A6F4180044792D /* LodjinhaTests */,
+				17F2BCA222ADFA1B0099F36D /* LodjinhaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -558,6 +637,13 @@
 			files = (
 				17BDA44C22A7142C0044792D /* Snapshots in Resources */,
 				17BDA4F022AC89F40044792D /* Banner_test.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17F2BCA122ADFA1B0099F36D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +800,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17F2BC9F22ADFA1B0099F36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F2BCB822ADFB770099F36D /* QuickSpec+KIF.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -721,6 +815,11 @@
 			isa = PBXTargetDependency;
 			target = 17A940F322A56835004B9054 /* Lodjinha */;
 			targetProxy = 17BDA42922A6F4190044792D /* PBXContainerItemProxy */;
+		};
+		17F2BCA922ADFA1C0099F36D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A940F322A56835004B9054 /* Lodjinha */;
+			targetProxy = 17F2BCA822ADFA1C0099F36D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1069,6 +1168,86 @@
 			};
 			name = Test;
 		};
+		17F2BCAA22ADFA1C0099F36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LodjinhaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.LodjinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LodjinhaUITests/LodjinhaUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Debug;
+		};
+		17F2BCAB22ADFA1C0099F36D /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LodjinhaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.LodjinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LodjinhaUITests/LodjinhaUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Test;
+		};
+		17F2BCAC22ADFA1C0099F36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LodjinhaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.LodjinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LodjinhaUITests/LodjinhaUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1098,6 +1277,16 @@
 				17BDA42C22A6F4190044792D /* Debug */,
 				17BDA44522A706F70044792D /* Test */,
 				17BDA42D22A6F4190044792D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17F2BCAD22ADFA1C0099F36D /* Build configuration list for PBXNativeTarget "LodjinhaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17F2BCAA22ADFA1C0099F36D /* Debug */,
+				17F2BCAB22ADFA1C0099F36D /* Test */,
+				17F2BCAC22ADFA1C0099F36D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,57 +1,57 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='LodjinhaTests.xctest' tests='38' failures='0'>
-  <testsuite name='LodjinhaTests.HomeViewControllerSpec' tests='8' failures='0'>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_number_of_rows_for_section' time='0.030'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_header_for_section' time='0.010'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDelegate__should_return_a_Product' time='0.008'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_height_for_header_in_section' time='0.009'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_number_of_sections' time='0.007'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__TableViewHandlerActionDelegate__should_conform_to_TableViewHandlerActionDelegate' time='0.008'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_cell_for_indexPath' time='0.009'/>
-    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__With_navigation__should_have_a_matching_snapshot' time='0.118'/>
-  </testsuite>
-  <testsuite name='LodjinhaTests.BannerCollectionViewDelegateSourceSpec' tests='2' failures='0'>
-    <testcase classname='LodjinhaTests.BannerCollectionViewDelegateSourceSpec' name='BannerCollectionViewDelegateSource__UICollectionViewDataSource__should_return_the_correct_cell' time='0.028'/>
-    <testcase classname='LodjinhaTests.BannerCollectionViewDelegateSourceSpec' name='BannerCollectionViewDelegateSource__UICollectionViewDelegateFlowLayout__should_return_the_correct_minimum_line_spacing' time='0.003'/>
-  </testsuite>
-  <testsuite name='LodjinhaTests.BannerTableViewHandlerSpec' tests='2' failures='0'>
-    <testcase classname='LodjinhaTests.BannerTableViewHandlerSpec' name='BannerTableViewHandler__TableViewHandlerDelegate__should_return_the_correct_cell_for_index_path' time='0.006'/>
-    <testcase classname='LodjinhaTests.BannerTableViewHandlerSpec' name='BannerTableViewHandler__TableViewHandlerDelegate__should_conform_to_TableViewHandlerDelegate' time='0.002'/>
-  </testsuite>
   <testsuite name='LodjinhaTests.AppCoordinatorSpec' tests='6' failures='0'>
-    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__Second_controller_from_Tab_Bar_Controller__should_have_the_correct_image' time='0.039'/>
-    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__TabBarController_number_of_controllers__should_have_two_controllers' time='0.019'/>
-    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__First_controller_from_Tab_Bar_Controller__should_have_the_correct_title' time='0.023'/>
-    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__Second_controller_from_Tab_Bar_Controller__should_have_the_correct_title' time='0.015'/>
-    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__First_controller_from_Tab_Bar_Controller__should_have_the_correct_image' time='0.017'/>
-    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__rootViewController__should_have_tab_bar_controller_as_root_controller' time='0.024'/>
-  </testsuite>
-  <testsuite name='LodjinhaTests.AboutViewControllerSpec' tests='3' failures='0'>
-    <testcase classname='LodjinhaTests.AboutViewControllerSpec' name='AboutViewController__With_navigation_and_tab_bar__should_have_a_matching_snapshot' time='0.071'/>
-    <testcase classname='LodjinhaTests.AboutViewControllerSpec' name='AboutViewController__Without_navigation_or_tab_bar__should_have_a_matching_snapshot' time='0.041'/>
-    <testcase classname='LodjinhaTests.AboutViewControllerSpec' name='AboutViewController__With_navigation__should_have_a_matching_snapshot' time='0.063'/>
+    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__First_controller_from_Tab_Bar_Controller__should_have_the_correct_title' time='0.067'/>
+    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__rootViewController__should_have_tab_bar_controller_as_root_controller' time='0.019'/>
+    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__First_controller_from_Tab_Bar_Controller__should_have_the_correct_image' time='0.018'/>
+    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__Second_controller_from_Tab_Bar_Controller__should_have_the_correct_image' time='0.017'/>
+    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__TabBarController_number_of_controllers__should_have_two_controllers' time='0.017'/>
+    <testcase classname='LodjinhaTests.AppCoordinatorSpec' name='AppCoordinator__Second_controller_from_Tab_Bar_Controller__should_have_the_correct_title' time='0.054'/>
   </testsuite>
   <testsuite name='LodjinhaTests.HomeCoordinatorSpec' tests='7' failures='0'>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__rootViewController__should_have_HomeViewController_as_root_controller_from_navigation_controller' time='0.008'/>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Navigation_Delegate__should_conform_to_HomeViewControllerNavigationDelegate' time='0.008'/>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Navigation_Delegate__should_conform_to_ProductDetailControllerNavigationDelegate' time='0.005'/>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Navigation_Delegate__should_conform_to_ProductsListControllerNavigationDelegate' time='0.005'/>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__rootViewController__should_have_navigation_controller_as_root_controller' time='0.004'/>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Tab_bar_item__should_have_the_correct_image' time='0.005'/>
-    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Tab_bar_item__should_have_the_correct_title' time='0.007'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__rootViewController__should_have_navigation_controller_as_root_controller' time='0.011'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Navigation_Delegate__should_conform_to_ProductsListControllerNavigationDelegate' time='0.008'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__rootViewController__should_have_HomeViewController_as_root_controller_from_navigation_controller' time='0.005'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Tab_bar_item__should_have_the_correct_image' time='0.007'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Navigation_Delegate__should_conform_to_HomeViewControllerNavigationDelegate' time='0.005'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Navigation_Delegate__should_conform_to_ProductDetailControllerNavigationDelegate' time='0.006'/>
+    <testcase classname='LodjinhaTests.HomeCoordinatorSpec' name='HomeCoordinator__Tab_bar_item__should_have_the_correct_title' time='0.006'/>
   </testsuite>
   <testsuite name='LodjinhaTests.AboutCoordinatorSpec' tests='4' failures='0'>
-    <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__Tab_bar_item__should_have_the_correct_image' time='0.005'/>
-    <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__Tab_bar_item__should_have_the_correct_title' time='0.005'/>
     <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__rootViewController__should_have_navigation_controller_as_root_controller' time='0.004'/>
-    <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__rootViewController__should_have_AboutViewController_as_root_controller_from_navigation_controller' time='0.004'/>
+    <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__Tab_bar_item__should_have_the_correct_image' time='0.006'/>
+    <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__rootViewController__should_have_AboutViewController_as_root_controller_from_navigation_controller' time='0.012'/>
+    <testcase classname='LodjinhaTests.AboutCoordinatorSpec' name='AboutCoordinator__Tab_bar_item__should_have_the_correct_title' time='0.005'/>
+  </testsuite>
+  <testsuite name='LodjinhaTests.BannerTableViewHandlerSpec' tests='2' failures='0'>
+    <testcase classname='LodjinhaTests.BannerTableViewHandlerSpec' name='BannerTableViewHandler__TableViewHandlerDelegate__should_conform_to_TableViewHandlerDelegate' time='0.022'/>
+    <testcase classname='LodjinhaTests.BannerTableViewHandlerSpec' name='BannerTableViewHandler__TableViewHandlerDelegate__should_return_the_correct_cell_for_index_path' time='0.009'/>
+  </testsuite>
+  <testsuite name='LodjinhaTests.AboutViewControllerSpec' tests='3' failures='0'>
+    <testcase classname='LodjinhaTests.AboutViewControllerSpec' name='AboutViewController__With_navigation__should_have_a_matching_snapshot' time='0.120'/>
+    <testcase classname='LodjinhaTests.AboutViewControllerSpec' name='AboutViewController__Without_navigation_or_tab_bar__should_have_a_matching_snapshot' time='0.053'/>
+    <testcase classname='LodjinhaTests.AboutViewControllerSpec' name='AboutViewController__With_navigation_and_tab_bar__should_have_a_matching_snapshot' time='0.067'/>
+  </testsuite>
+  <testsuite name='LodjinhaTests.BannerCollectionViewDelegateSourceSpec' tests='2' failures='0'>
+    <testcase classname='LodjinhaTests.BannerCollectionViewDelegateSourceSpec' name='BannerCollectionViewDelegateSource__UICollectionViewDelegateFlowLayout__should_return_the_correct_minimum_line_spacing' time='0.002'/>
+    <testcase classname='LodjinhaTests.BannerCollectionViewDelegateSourceSpec' name='BannerCollectionViewDelegateSource__UICollectionViewDataSource__should_return_the_correct_cell' time='0.015'/>
   </testsuite>
   <testsuite name='LodjinhaTests.TableViewHandlerSpec' tests='6' failures='0'>
-    <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_cell_for_indexPath' time='0.001'/>
-    <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_header_for_section' time='0.002'/>
-    <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_height_for_header_in_section' time='0.006'/>
+    <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_height_for_header_in_section' time='0.001'/>
     <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_number_of_rows_for_section' time='0.001'/>
+    <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_cell_for_indexPath' time='0.002'/>
     <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_have_the_correct_number_of_sections' time='0.001'/>
     <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_a_Product' time='0.001'/>
+    <testcase classname='LodjinhaTests.TableViewHandlerSpec' name='TableViewHandler__TableViewHandlerDelegate__should_return_the_correct_header_for_section' time='0.001'/>
+  </testsuite>
+  <testsuite name='LodjinhaTests.HomeViewControllerSpec' tests='8' failures='0'>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__TableViewHandlerActionDelegate__should_conform_to_TableViewHandlerActionDelegate' time='0.008'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_header_for_section' time='0.009'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_number_of_rows_for_section' time='0.009'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_height_for_header_in_section' time='0.006'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_cell_for_indexPath' time='0.007'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__With_navigation__should_have_a_matching_snapshot' time='0.067'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDelegate__should_return_a_Product' time='0.007'/>
+    <testcase classname='LodjinhaTests.HomeViewControllerSpec' name='HomeViewController__TableViewHandlerDelegate__UITableViewDataSource__should_return_the_correct_number_of_sections' time='0.007'/>
   </testsuite>
 </testsuites>

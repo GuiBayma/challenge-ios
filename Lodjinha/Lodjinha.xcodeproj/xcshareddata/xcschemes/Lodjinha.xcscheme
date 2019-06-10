@@ -41,6 +41,16 @@
                ReferencedContainer = "container:Lodjinha.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "17F2BCA222ADFA1B0099F36D"
+               BuildableName = "LodjinhaUITests.xctest"
+               BlueprintName = "LodjinhaUITests"
+               ReferencedContainer = "container:Lodjinha.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
